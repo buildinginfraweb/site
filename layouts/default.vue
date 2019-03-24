@@ -6,8 +6,8 @@
       </v-container>
     </v-content>
     <contact-form />
-    <v-container fluid pa-4 class="grey darken-4 footer">
-      <v-layout>
+    <v-container fluid pa-4 class="grey darken-4 footer text-xs-center">
+      <v-layout :column="$vuetify.breakpoint.xs" wrap>
         <v-spacer></v-spacer>
         <v-flex px-3 shrink>
           <nuxt-link to="/">
@@ -73,6 +73,9 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
+  },
+  mounted () {
+    console.log(this.$vuetify)
   }
 }
 </script>
