@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
+    browser: false,
     node: true
   },
   parserOptions: {
@@ -9,13 +9,7 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-    'prettier/vue'
-  ],
-  plugins: [
-    'prettier'
+    'plugin:nuxt/recommended'
   ],
   // add your custom rules here
   rules: {
