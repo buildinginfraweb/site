@@ -51,7 +51,32 @@
           <v-spacer></v-spacer>
           <v-flex shrink class="white--text">
             <h1 class="display-4 font-weight-bold">We do it</h1>
-            <h2 class="display-1">and you relax</h2>
+            <v-layout>
+              <v-flex shrink>
+                <h2 class="display-1">
+                  and you&nbsp;
+                </h2>
+              </v-flex>
+              <v-flex>
+                <h2 class="display-1">
+                  <no-ssr>
+                    <vue-typer
+                      :text='["relax...","sell...","enjoy...","grow..."]'
+                      :repeat='Infinity'
+                      :shuffle='false'
+                      initial-action='erasing'
+                      :pre-type-delay='70'
+                      :type-delay='70'
+                      :pre-erase-delay='2000'
+                      :erase-delay='250'
+                      erase-style='backspace'
+                      :erase-on-complete='false'
+                      caret-animation='blink'
+                    ></vue-typer>
+                  </no-ssr>
+                </h2>
+              </v-flex>
+            </v-layout>
           </v-flex>
         </v-layout>
       </v-container>
@@ -103,9 +128,13 @@
 
 <script>
 import ContactForm from '~/components/ContactForm'
+if (process.browser) {
+  var VueTyper = require('vue-typer').VueTyper
+}
 export default {
   components: {
-    ContactForm
+    ContactForm,
+    VueTyper
   },
   data() {
     return {
@@ -163,6 +192,15 @@ export default {
   }
   .header .slogan {
     color: #fffeff;
+  }
+  .vue-typer .custom.char.typed {
+    color: #fffeff;
+  }
+  .vue-typer .custom.char.selected {
+    color: #fffeff;
+  }
+  .vue-typer .custom.caret {
+    background-color: #fffeff;
   }
   .footer a, .footer{
     text-decoration: none;
