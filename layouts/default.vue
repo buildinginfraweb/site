@@ -1,5 +1,61 @@
 <template>
   <v-app>
+    <div class="header">
+      <v-container>
+        <v-layout px-4>
+          <v-flex xs12>
+            <v-layout align-center>
+              <v-flex>
+                <img src="/logo.png" alt="Logo Building Infra" height="60px">
+              </v-flex>
+              <v-spacer></v-spacer>
+              <v-flex shrink>
+                <v-btn class="elevation-0 support-btn">
+                  Suporte sob demanda
+                </v-btn>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+        </v-layout>
+        <v-layout px-4 row wrap>
+          <v-flex xs12 mt-2 mb-3>
+            <v-divider></v-divider>
+          </v-flex>
+          <v-flex shrink px-3>
+            <nuxt-link to="/" class="selected">
+              Home
+            </nuxt-link>
+          </v-flex>
+          <v-flex px-3 shrink>
+            <nuxt-link to="/sobre">
+              Sobre Nós
+            </nuxt-link>
+          </v-flex>
+          <v-flex px-3 shrink>
+            <nuxt-link to="/time">
+              Nosso time
+            </nuxt-link>
+          </v-flex>
+          <v-flex px-3 shrink>
+            <nuxt-link to="/servicos">
+              Serviços
+            </nuxt-link>
+          </v-flex>
+          <v-flex px-3 shrink>
+            <nuxt-link to="/contato">
+              Contato
+            </nuxt-link>
+          </v-flex>
+        </v-layout>
+        <v-layout px-4 class="slogan mt-5 pt-4">
+          <v-spacer></v-spacer>
+          <v-flex shrink class="white--text">
+            <h1 class="display-4 font-weight-bold">We do it</h1>
+            <h2 class="display-1">and you relax</h2>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
     <v-content>
       <v-container>
         <nuxt />
@@ -80,9 +136,37 @@ export default {
 }
 </script>
 <style>
- .footer a, .footer{
-   text-decoration: none;
-   color:#c8c8c8;
- }
+  .support-btn {
+    border-radius: 8px;
+    background: linear-gradient(140deg,#2bb6fc,#2867b5);
+    color: #fffeff!important;
+  }
+  .header {
+    background-image: url('/banner-1.jpg');
+    height: 100vh;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+  .header a {
+    text-decoration: none;
+    color: #fffeff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .header a.nuxt-link-active {
+    color: #1f70a5;
+  }
+  .header .v-divider {
+    border-color: rgba(236, 236, 239, 0.05)!important;
+  }
+  .header .slogan {
+    color: #fffeff;
+  }
+  .footer a, .footer{
+    text-decoration: none;
+    color:#c8c8c8;
+  }
 </style>
 

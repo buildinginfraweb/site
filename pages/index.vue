@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout>
+    <v-layout style="position: relative;top: -175px;height: 150px;">
       <v-flex xs12>
         <v-container fluid pa-0 grid-list-md>
           <v-layout>
