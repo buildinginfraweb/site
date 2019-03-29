@@ -123,6 +123,14 @@ import CommentsCarousel from '~/components/CommentsCarousel'
 export default {
   components: {
     CommentsCarousel
+  },
+    head () {
+    return {
+      title: 'Building Infra',
+      meta: [
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
   }
 }
 </script>
