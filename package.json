@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
+    "aos": "^2.3.4",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
     "vue-typer": "^1.2.0",

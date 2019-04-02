@@ -1,24 +1,24 @@
 <template>
   <v-container>
-    <v-layout style="position: relative;top: -175px;height: 150px;">
+    <v-layout class="over-banner">
       <v-flex xs12>
         <v-container fluid pa-0 grid-list-md>
-          <v-layout>
-            <v-flex xs4>
+          <v-layout  row wrap>
+            <v-flex xs12 sm4>
               <img src="/img-1.jpg" alt="" style="max-width:100%">
               <v-icon small color="primary" style="position:absolute">subdirectory_arrow_right</v-icon>
               <p class="pl-3 grey--text text--darken-3 caption">
                 Entendemos que cada cliente é unico e possuimos um atendimento personalizado para cada tipo de negócio
               </p>
             </v-flex>
-            <v-flex xs4>
+            <v-flex xs12 sm4>
               <img src="/img-2.jpg" alt="" style="max-width:100%">
               <v-icon small color="primary" style="position:absolute">subdirectory_arrow_right</v-icon>
               <p class="pl-3 grey--text text--darken-3 caption">
                 Flexibilidade na relação comercial desde da proposta de negócios à atualizações de contrato
               </p>
             </v-flex>
-            <v-flex xs4>
+            <v-flex xs12 sm4>
               <img src="/img-3.jpg" alt="" style="max-width:100%">
               <v-icon small color="primary" style="position:absolute">subdirectory_arrow_right</v-icon>
               <p class="pl-3 grey--text text--darken-3 caption">
@@ -30,7 +30,9 @@
       </v-flex>
     </v-layout>
     <v-layout mb-5>
-      <v-flex xs7 pr-3>
+      <v-flex xs12 sm7 pr-3
+        data-aos="fade-right"
+        data-aos-duration="500">
         <h3 class="display-1 mb-3">
           Soluções em infraestrutura,<br>
           isso é <span class="primary--text font-weight-bold">Building infra</span>
@@ -48,13 +50,15 @@
           Veja mais
         </v-btn>
       </v-flex>
-      <v-flex xs5 ml-3 style="background-image: url(/img-sobre-1.jpg);background-size: cover;background-position: center;">
+      <v-flex sm5 class="hidden-xs-only" ml-3 style="background-image: url(/img-sobre-1.jpg);background-size: cover;background-position: center;">
       </v-flex>
     </v-layout>
     <v-layout mb-5>
-      <v-flex xs5 mr-3 style="background-image: url(/img-pessoas.png);background-size: cover;background-position: center;">
+      <v-flex sm5 class="hidden-xs-only" mr-3 style="background-image: url(/img-pessoas.png);background-size: cover;background-position: center;">
       </v-flex>
-      <v-flex xs7 pl-3>
+      <v-flex xs12 sm7 pl-3 
+        data-aos="fade-left"
+        data-aos-duration="500">
         <h3 class="display-1 mb-3">
           Somos uma empresa<br><span class="primary--text font-weight-bold">totalmente diferente</span>
         </h3>
@@ -70,10 +74,29 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap>
-      <v-flex xs12 sm4 pr-1>
+      <v-container grid-list-md fluid pa-0>
+        <v-layout row wrap>
+        <v-flex xs12 class="hidden-sm-and-up">
+          <v-container fill-height fluid pa-4>
+            <v-layout align-center>
+              <v-flex class="text-xs-center">
+                <h5 class="headline">
+                  Confira<br>
+                  <span class="primary--text font-weight-bold">nossos serviços</span>
+                </h5>
+                <p class="grey--text text--darken-3">
+                  entendemos que clientes possuem nescessidades únicas e
+                  é desta forma que cada cliente é tratado. Para tanto 
+                  procuramos entender junto com cada cliente suas necessidades
+                </p>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-flex>
+      <v-flex xs12 sm4>
         <img src="/helpdesk.jpg" alt="" style="max-width:100%">
       </v-flex>
-      <v-flex xs12 sm4>
+      <v-flex sm4 class="hidden-xs-only">
         <v-container fill-height fluid pa-4>
           <v-layout align-center>
             <v-flex class="text-xs-center">
@@ -90,12 +113,12 @@
           </v-layout>
         </v-container>
       </v-flex>
-      <v-flex xs12 sm4 pl-1>
+      <v-flex xs12 sm4>
         <img src="/suporte.jpg" alt="" style="max-width:100%">
       </v-flex>
+      </v-layout>
       <v-flex xs12>
-        <v-container grid-list-md pa-0 fluid>
-          <v-layout>
+          <v-layout row wrap>
             <v-flex xs12 sm4>
               <img src="/infraestrutura.jpg" alt="" style="max-width:100%">
             </v-flex>
@@ -106,13 +129,14 @@
               <img src="/treinamento.jpg" alt="" style="max-width:100%">
             </v-flex>
           </v-layout>
-        </v-container>
       </v-flex>
+        
       <v-flex xs12 class="text-xs-center" my-3>
         <v-btn color="primary" round outline>
           Veja mais
         </v-btn>
       </v-flex>
+    </v-container>
     </v-layout>
     <CommentsCarousel />
   </v-container>
@@ -134,3 +158,15 @@ export default {
   }
 }
 </script>
+
+<style>
+
+@media only screen and (min-width: 600px) {
+  .over-banner {
+    position: relative;
+    top: -175px;
+    height: 150px;
+  }
+}
+
+</style>
