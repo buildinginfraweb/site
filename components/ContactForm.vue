@@ -115,6 +115,7 @@ export default {
         this.text = 'Campos não preenchidos'
       } else {
         this.loading = true
+        // https://codepen.io/anon/pen/PgwrQQ
         await new Promise(resolve => setTimeout(resolve, 1000))
         this.snackbar = true
         this.color = 'primary'

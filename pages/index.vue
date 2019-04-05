@@ -46,7 +46,7 @@
         <p  class="grey--text text--darken-1">
           Vamos além de suporte ao usuário e manutenção computadores também nos especializamos ao proeto de implementação de estrutura de dados e sstemas, auxiliando a manter desde do projeto inicial até a segurança da internet.
         </p>
-        <v-btn color="primary" class="ml-0" round outline>
+        <v-btn color="primary" class="ml-0" round outline @click="$router.push('/sobre')">
           Veja mais
         </v-btn>
       </v-flex>
@@ -85,7 +85,7 @@
                   <span class="primary--text font-weight-bold">nossos serviços</span>
                 </h5>
                 <p class="grey--text text--darken-3">
-                  entendemos que clientes possuem nescessidades únicas e
+                  Entendemos que clientes possuem nescessidades únicas e
                   é desta forma que cada cliente é tratado. Para tanto 
                   procuramos entender junto com cada cliente suas necessidades
                 </p>
@@ -105,7 +105,7 @@
                 <span class="primary--text font-weight-bold">nossos serviços</span>
               </h5>
               <p class="grey--text text--darken-3">
-                entendemos que clientes possuem nescessidades únicas e
+                Entendemos que clientes possuem nescessidades únicas e
                 é desta forma que cada cliente é tratado. Para tanto 
                 procuramos entender junto com cada cliente suas necessidades
               </p>

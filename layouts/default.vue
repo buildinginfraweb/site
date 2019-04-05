@@ -6,17 +6,15 @@
           fixed
           right
           dark
+          class="nav"
           width="200"
         >
-        <v-container class="py-0 mt-2" fluid>
-          <v-layout>
-            <v-flex class="text-xs-center">
-              <img src="/symbol-bg-branco.png" alt="" style="max-width:90px">
-            </v-flex>
-          </v-layout>
-        </v-container>
-      <v-list class="pt-0" dense>
-        <v-divider></v-divider>
+      <v-list class="pt-0 text-xs-center" dense>
+        <v-list-tile class="py-5 mb-4" style="height:80px">
+          <v-list-tile-content class="text-xs-center"  style="height:80px">
+              <img src="/symbol-bg-branco.png" alt="" style="margin:auto;max-width:90px">
+          </v-list-tile-content>
+        </v-list-tile>
         <v-list-tile class="py-1">
           <v-list-tile-content>
             <v-list-tile-title>
@@ -26,7 +24,6 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider></v-divider>
         <v-list-tile class="py-1">
           <v-list-tile-content>
             <v-list-tile-title>
@@ -36,7 +33,6 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider></v-divider>
         <v-list-tile class="py-1">
           <v-list-tile-content>
             <v-list-tile-title>
@@ -46,7 +42,6 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider></v-divider>
         <v-list-tile class="py-1">
           <v-list-tile-content>
             <v-list-tile-title>
@@ -56,7 +51,6 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider></v-divider>
         <v-list-tile class="py-1">
           <v-list-tile-content>
             <v-list-tile-title>
@@ -142,7 +136,87 @@
             </nuxt-link>
           </v-flex>
         </v-layout>
-        <v-layout px-4 class="slogan mt-5 pt-4">
+        <v-layout px-4 class="white--text">
+          <v-flex xs12 class="mt-5 pt-2">
+            <v-carousel  height="360" v-model="headerCarousel" hide-controls hide-delimiters class="elevation-0">
+              <v-carousel-item>
+                <v-container>
+                  <v-layout>
+                    <v-flex shrink>
+                      <h1 class="display-3">
+                        Soluções em infraestrutura
+                      </h1>
+                    </v-flex>
+                    <v-spacer></v-spacer>
+                  </v-layout>
+                  <v-layout row wrap>
+                    <v-flex xs12>
+                      <p class="title font-weight-light">
+                        A segurança de rede não é mais um luxo para as grandes corporações e sim uma necessidade
+                      </p>
+                    </v-flex>
+                    <v-flex>
+                    <v-btn color="white" class="ml-0" round outline @click="$router.push('/sobre')">
+                      Veja mais
+                    </v-btn>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-carousel-item>
+              
+              <v-carousel-item>
+                <v-container>
+                  <v-layout>
+                    <v-flex shrink>
+                      <h1 class="display-3">
+                        Somos uma empresa totalmente diferente
+                      </h1>
+                    </v-flex>
+                    <v-spacer></v-spacer>
+                  </v-layout>
+                  <v-layout row wrap>
+                    <v-flex xs12>
+                      <p class="title font-weight-light">
+                        Nós nos esforcamos para ser um perceiro que você pode confiar, independente do problema nos colocamos a disposição para ajudar a melhorar cada vez mais a funcionalidade da sua empresa
+                      </p>
+                    </v-flex>
+                    <v-flex>
+                    <v-btn color="white" class="ml-0" round outline @click="$router.push('/sobre')">
+                      Veja mais
+                    </v-btn>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-carousel-item>
+              
+              <v-carousel-item>
+                <v-container>
+                  <v-layout>
+                    <v-flex shrink>
+                      <h1 class="display-3">
+                        Nossos serviços
+                      </h1>
+                    </v-flex>
+                    <v-spacer></v-spacer>
+                  </v-layout>
+                  <v-layout row wrap>
+                    <v-flex xs12>
+                      <p class="title font-weight-light">
+                        entendemos que clientes possuem nescessidades únicas e é desta forma que cada cliente é tratado. Para tanto procuramos entender junto com cada cliente suas necessidades
+                      </p>
+                    </v-flex>
+                    <v-flex>
+                    <v-btn color="white" class="ml-0" round outline @click="$router.push('/sobre')">
+                      Veja mais
+                    </v-btn>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-carousel-item>
+            </v-carousel>
+          </v-flex>
+        </v-layout>
+        <v-layout px-4 class="slogan mt-5 pt-4" v-if="false">
           <v-spacer></v-spacer>
           <v-flex shrink class="white--text">
             <h1 class="display-4 font-weight-bold">We do it</h1>
@@ -233,6 +307,7 @@ export default {
   },
   data() {
     return {
+      headerCarousel: 0,
       clipped: false,
       drawer: false,
       fixed: false,
@@ -293,7 +368,7 @@ export default {
     font-weight: 600;
   }
   .header a.nuxt-link-active {
-    color: #1f70a5;
+    color: white;
   }
   .header .v-divider {
     border-color: rgba(236, 236, 239, 0.05)!important;
@@ -324,6 +399,13 @@ export default {
   .footer a, .footer{
     text-decoration: none;
     color:#c8c8c8;
+  }
+  .nav .v-list__tile__title{
+    text-align: center
+  }
+  .nav .v-list__tile__title a {
+    color: white;
+    text-decoration: none;
   }
 </style>
 
