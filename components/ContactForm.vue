@@ -109,14 +109,27 @@ export default {
   methods: {
     async send() {
       if (this.name === '' || (this.email === '' || this.phone === '') || this.subject === '' || this.message === '') {
-        console.log('oi')
         this.snackbar = true
         this.color = 'error'
         this.text = 'Campos não preenchidos'
       } else {
         this.loading = true
+        const response = await window.fetch('http://web.buildinginfra.com.br/sendmail.php', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+          {
+            'ASSUNTO': this.subject, 
+            'remetente_Nome': this.name,
+            'remetente_Email': this.email,
+            '01_mensagem':  this.message,
+            '02_phone': this.phone
+          })
+        })
         // https://codepen.io/anon/pen/PgwrQQ
-        await new Promise(resolve => setTimeout(resolve, 1000))
         this.snackbar = true
         this.color = 'primary'
         this.text = 'Mensagem enviada!'
