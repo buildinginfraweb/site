@@ -338,9 +338,9 @@ export default {
         navigator.userAgent.match(/iPod/i) ||
         navigator.userAgent.match(/BlackBerry/i) ||
         navigator.userAgent.match(/Windows Phone/i)) {
-        window.open(`https://api.whatsapp.com/send?phone=5511976436250&text=Gostaria de algumas informações sobre:`, '_blank')
+        window.open(`https://api.whatsapp.com/send?phone=5511989541137&text=Gostaria de algumas informações sobre:`, '_blank')
       } else {
-        window.open(`https://web.whatsapp.com/send?phone=5511976436250&text=Gostaria de algumas informações sobre:`, '_blank')
+        window.open(`https://web.whatsapp.com/send?phone=5511989541137&text=Gostaria de algumas informações sobre:`, '_blank')
       }
     }
   }
@@ -351,6 +351,7 @@ export default {
     border-radius: 8px;
     background: linear-gradient(140deg,#2bb6fc,#2867b5);
     color: #fffeff!important;
+    background-color: transparent!important;
   }
   .header {
     background-image: url('/banner-1.jpg');
