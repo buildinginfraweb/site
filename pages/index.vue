@@ -68,7 +68,7 @@
         <p  class="grey--text text--darken-1">
           Nos orgulhamos de não ser apenas o cada dos computadores e sim mais um membro da equipe, confiável e experiente que reflete sua paixão pelo seu negócioNos orgulhamos de não ser apenas o cada dos computadores e sim mais um membro da equipe, confiável e experiente que reflete sua paixão pelo seu negócio.
         </p>
-        <v-btn color="primary" class="ml-0" round outline>
+        <v-btn color="primary" class="ml-0" round outline @click="$router.push('/time')">
           Veja mais
         </v-btn>
       </v-flex>
@@ -130,9 +130,8 @@
             </v-flex>
           </v-layout>
       </v-flex>
-        
       <v-flex xs12 class="text-xs-center" my-3>
-        <v-btn color="primary" round outline>
+        <v-btn color="primary" round outline  @click="$router.push('/servicos')">
           Veja mais
         </v-btn>
       </v-flex>
