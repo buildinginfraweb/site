@@ -1,8 +1,7 @@
 <?php
   header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
   header('Access-Control-Allow-Methods: OPTIONS, POST');
-  date_default_timezone_set('Etc/GMT+3');
-
+  date_default_timezone_set('America/Sao_Paulo');
   require 'PHPMailer/PHPMailerAutoload.php';
 
   if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
@@ -15,7 +14,8 @@
   $assunto = $post->assunto;
   $nomeRemetente = $post->nome;
   $emailRemetente = $post->email;
-  $msg = "{$post->nome}: <br><br>{$post->mensagem} <br><br> telefone: {$post->telefone} / email: {$post->email}";
+  $dateString = date('d/m/Y H:i:s');
+  $msg = "{$post->nome}: <br><br>{$post->mensagem} <br><br> telefone: {$post->telefone} / email: {$post->email} <div style='font-size: 10px; padding-top:20px;color:grey;'>{$dateString}</div>";
 
   $recipients = array(
     'contato@buildinginfra.com.br' => 'Contato Site'
