@@ -251,7 +251,7 @@
       </v-container>
     </div>
     <v-content>
-      <v-container>
+      <v-container id="main-section">
         <nuxt />
       </v-container>
     </v-content>
@@ -343,6 +343,17 @@ export default {
         window.open(`https://web.whatsapp.com/send?phone=5511989541137&text=Gostaria de algumas informações sobre:`, '_blank')
       }
     }
+  },
+  watch: {
+    $route (value) {
+      setTimeout(() => {
+        if (value.name === 'index') {
+          this.$vuetify.goTo('#main-section', {offset: 130})
+        }else {
+          this.$vuetify.goTo('#main-section', {offset: 30})
+        }
+      }, 300)
+    }
   }
 }
 </script>
@@ -370,6 +381,13 @@ export default {
   }
   .header a.nuxt-link-active {
     color: white;
+    
+  }
+  .nav .nuxt-link-exact-active,
+  .header .nuxt-link-exact-active,
+  .footer .nuxt-link-exact-active {
+    pointer-events: none;
+    border-bottom: 1px solid #0496d8;
   }
   .header .v-divider {
     border-color: rgba(236, 236, 239, 0.05)!important;

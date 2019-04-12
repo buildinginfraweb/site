@@ -20,7 +20,7 @@
     <v-layout class="mb-4">
       <v-container fluid pa-0 grid-list-md>
         <v-layout row wrap justify-space-between>
-          <v-flex xs12 sm6 md4 v-for="(card, index) in servicos" :key="index" data-aos="flip-left">
+          <v-flex xs12 sm6 md4 v-for="(card, index) in servicos" :key="index"  data-aos="flip-left">
             <v-img :src="card.image" :alt="card.alt" />
           </v-flex>
         </v-layout>

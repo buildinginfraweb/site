@@ -2,7 +2,7 @@
   <v-container>
     <v-layout mb-5>
       <v-flex xs12 sm7 pr-3
-        data-aos="fade-right"
+         data-aos="fade-right"
         data-aos-duration="500">
         <h3 class="display-1 mb-3">
           Soluções em infraestrutura,<br>
@@ -25,7 +25,7 @@
       <v-flex sm5 class="hidden-xs-only" mr-3 style="background-image: url(/sobre-2.jpg);background-size: cover;background-position: center;">
       </v-flex>
       <v-flex xs12 sm7 pl-3 
-        data-aos="fade-left"
+         data-aos="fade-left"
         data-aos-duration="500">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. 

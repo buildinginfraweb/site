@@ -4,7 +4,7 @@
       <v-flex sm5 class="hidden-xs-only" mr-3 style="background-image: url(/img-pessoas.png);background-size: cover;background-position: center;">
       </v-flex>
       <v-flex xs12 sm7 pl-3 
-        data-aos="fade-left"
+         data-aos="fade-left"
         data-aos-duration="500">
         <h3 class="display-1 mb-3">
           Somos uma empresa<br><span class="primary--text font-weight-bold">totalmente diferente</span>
