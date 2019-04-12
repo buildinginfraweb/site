@@ -114,7 +114,7 @@ export default {
         this.text = 'Campos não preenchidos'
       } else {
         this.loading = true
-        const response = await window.fetch('http://web.buildinginfra.com.br/sendmail.php', {
+        const response = await window.fetch('/php/sendmail.php', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -122,11 +122,11 @@ export default {
         },
         body: JSON.stringify(
           {
-            'ASSUNTO': this.subject, 
-            'remetente_Nome': this.name,
-            'remetente_Email': this.email,
-            '01_mensagem':  this.message,
-            '02_phone': this.phone
+            'assunto': this.subject, 
+            'nome': this.name,
+            'email': this.email,
+            'mensagem':  this.message,
+            'telefone': this.phone
           })
         })
         // https://codepen.io/anon/pen/PgwrQQ
