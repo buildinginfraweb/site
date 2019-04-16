@@ -31,7 +31,7 @@
     </v-layout>
     <v-layout mb-5>
       <v-flex xs12 sm7 pr-3
-         data-aos="fade-right"
+        data-aos="fade-right"
         data-aos-duration="500">
         <h3 class="display-1 mb-3">
           Soluções em infraestrutura,<br>

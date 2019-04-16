@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout>
+    <v-layout row wrap>
       <v-flex xs12 sm6>
          <h2 class="display-1 mb-5">
           Entre em contato com a 
@@ -31,7 +31,7 @@
             ou
           </v-flex>
           <v-divider></v-divider>
-          <v-spacer></v-spacer>
+          <v-spacer class="hidden-xs-only"></v-spacer>
         </v-layout>
         <v-layout>
           <v-flex class="title mb-2 grey--text text--darken-1">
@@ -62,13 +62,13 @@
             </a>
           </v-flex>
         </v-layout>
-        <!-- <v-layout align-center class="my-4">
+        <v-layout align-center class="my-4">
           <v-divider></v-divider>
           <v-flex shrink class="px-4 grey--text">
             ou
           </v-flex>
           <v-divider></v-divider>
-          <v-spacer></v-spacer>
+          <v-spacer class="hidden-xs-only"></v-spacer>
         </v-layout>
         <v-layout>
           <v-flex class="title mb-2 grey--text text--darken-1">
@@ -86,21 +86,26 @@
               Rua Capitão Salinas, 281 - Sala 02 Jd. Universal - Barueri
             </span>
           </v-flex>
-        </v-layout> -->
+        </v-layout>
       </v-flex>
-      <!-- <v-flex xs12 sm6>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9204297026354!2d-46.89058998520831!3d-23.499375365190765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf039380e13a21%3A0x63a712b8d28ceee8!2sR.+Cap.+Salinas%2C+281+-+Vila+Universal%2C+Barueri+-+SP%2C+06407-010!5e0!3m2!1spt-BR!2sbr!4v1554669940195!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </v-flex> -->
+      <v-flex xs12 sm6>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9204297026354!2d-46.89058998520831!3d-23.499375365190765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf039380e13a21%3A0x63a712b8d28ceee8!2sR.+Cap.+Salinas%2C+281+-+Vila+Universal%2C+Barueri+-+SP%2C+06407-010!5e0!3m2!1spt-BR!2sbr!4v1554669940195!5m2!1spt-BR!2sbr" class="maps-frame" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
 <style>
-
+.maps-frame {
+  min-height: 400px;
+  width: calc(100% + 60px);
+  position: relative;
+  left: -30px;
+  top: 35px;
+}
 </style>

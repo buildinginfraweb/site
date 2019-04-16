@@ -138,7 +138,7 @@
         </v-layout>
         <v-layout px-4 class="white--text">
           <v-flex xs12 class="mt-5 pt-2">
-            <v-carousel  height="360" v-model="headerCarousel" hide-controls hide-delimiters class="elevation-0">
+            <v-carousel  height="360" v-model="headerCarousel" hide-controls hide-delimiters class="elevation-0" v-if="false">
               <v-carousel-item>
                 <v-container>
                   <v-layout>
@@ -216,7 +216,7 @@
             </v-carousel>
           </v-flex>
         </v-layout>
-        <v-layout px-4 class="slogan mt-5 pt-4" v-if="false">
+        <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
           <v-spacer></v-spacer>
           <v-flex shrink class="white--text">
             <h1 class="display-4 font-weight-bold">We do it</h1>
@@ -425,6 +425,9 @@ export default {
   .nav .v-list__tile__title a {
     color: white;
     text-decoration: none;
+  }
+  body{
+    overflow-x: hidden;
   }
 </style>
 

@@ -69,7 +69,7 @@
                     placeholder="Mensagem"
                   />
                 </v-flex>
-                <v-flex xs12>
+                <v-flex xs12 class="text-xs-center text-sm-left">
                   <v-btn color="primary" round @click="send()" :loading="loading">
                     Enviar
                   </v-btn>

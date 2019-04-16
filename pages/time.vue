@@ -21,7 +21,7 @@
       <v-flex xs12>
         <v-container pa-0 fluid grid-list-md>
           <v-layout row wrap>
-            <v-flex xs12 sm6 md4 v-for="(person, index) in team" :key="index">
+            <v-flex xs12 sm6 md4 v-for="(person, index) in team" :key="index" data-aos="fade">
               <v-hover>
                 <v-card
                   slot-scope="{ hover }"
