@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout class="over-banner">
+    <v-layout class="over-banner" v-if="false">
       <v-flex xs12>
         <v-container fluid pa-0 grid-list-md>
           <v-layout  row wrap>
@@ -29,7 +29,7 @@
         </v-container>
       </v-flex>
     </v-layout>
-    <v-layout mb-5>
+    <v-layout mb-5 v-if="false">
       <v-flex xs12 sm7 pr-3
         data-aos="fade-right"
         data-aos-duration="500">
@@ -53,7 +53,7 @@
       <v-flex sm5 class="hidden-xs-only" ml-3 style="background-image: url(/img-sobre-1.jpg);background-size: cover;background-position: center;">
       </v-flex>
     </v-layout>
-    <v-layout mb-5>
+    <v-layout mb-5 v-if="false">
       <v-flex sm5 class="hidden-xs-only" mr-3 style="background-image: url(/img-pessoas.png);background-size: cover;background-position: center;">
       </v-flex>
       <v-flex xs12 sm7 pl-3 
@@ -73,7 +73,7 @@
         </v-btn>
       </v-flex>
     </v-layout>
-    <v-layout row wrap>
+    <v-layout row wrap v-if="false">
       <v-container grid-list-md fluid pa-0>
         <v-layout row wrap>
         <v-flex xs12 class="hidden-sm-and-up">
