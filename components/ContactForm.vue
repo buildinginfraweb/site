@@ -5,15 +5,7 @@
       <v-flex xs12 md6 class="grey lighten-4 py-4 px-5" style="border-top:1px solid #EEEEEE">
         <v-layout row wrap>
           <v-flex xs12 class="grey--text text--darken-3  mt-2 title font-weight-bold">
-            Quando você se tornar um cliente B.I. pode ficar tranquilo,
-            temos <span class="primary--text">técnicos capacitados</span>
-            com grande conhecimento para melhor atenteder sua empresa.
-          </v-flex>
-          <v-flex xs12 class="grey--text text--darken-1 mt-2">
-            Entre em contato conosco ahora para conhecer
-            nossos planos personalizados para atender as
-            suas nescessidades e garantir a tranquilidade
-            de sua empresa.
+            Entre em contato conosco <span class="primary--text">agora</span> e agende uma visita comercial:
           </v-flex>
           <v-flex xs12>
             <v-container grid-list-xl fluid pa-0 mt-3>
