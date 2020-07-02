@@ -160,70 +160,7 @@
             </v-carousel>
           </v-flex>
         </v-layout>
-        <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
-          <v-flex shrink class="white--text">
-            <h1 class="display-4 font-weight-bold">We do it</h1>
-            <v-layout>
-              <v-flex shrink>
-                <h2 class="display-1">
-                  and you&nbsp;
-                </h2>
-              </v-flex>
-              <v-flex>
-                <h2 class="display-1">
-                  <no-ssr>
-                    <vue-typer
-                      :text='["relax... ","sell... ","enjoy...","grow...  "]'
-                      :repeat='Infinity'
-                      :shuffle='false'
-                      initial-action='erasing'
-                      :pre-type-delay='70'
-                      :type-delay='70'
-                      :pre-erase-delay='2000'
-                      :erase-delay='250'
-                      erase-style='backspace'
-                      :erase-on-complete='false'
-                      caret-animation='blink'
-                    ></vue-typer>
-                  </no-ssr>
-                </h2>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-          <v-spacer></v-spacer>
-        </v-layout>
-        <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
-          <v-spacer></v-spacer>
-          <v-flex shrink class="white--text">
-            <h1 class="display-4 font-weight-bold">Nós fazemos</h1>
-            <v-layout>
-              <v-flex shrink>
-                <h2 class="display-1">
-                  e você&nbsp;
-                </h2>
-              </v-flex>
-              <v-flex>
-                <h2 class="display-1">
-                  <no-ssr>
-                    <vue-typer
-                      :text='["relaxa...","vende...","curte...","cresce..."]'
-                      :repeat='Infinity'
-                      :shuffle='false'
-                      initial-action='erasing'
-                      :pre-type-delay='70'
-                      :type-delay='70'
-                      :pre-erase-delay='2000'
-                      :erase-delay='250'
-                      erase-style='backspace'
-                      :erase-on-complete='false'
-                      caret-animation='blink'
-                    ></vue-typer>
-                  </no-ssr>
-                </h2>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
+        <SloganType />
       </v-container>
     </div>
     <v-content>
@@ -253,13 +190,12 @@
 
 <script>
 import ContactForm from '~/components/ContactForm'
-if (process.browser) {
-  var VueTyper = require('vue-typer').VueTyper
-}
+import SloganType from '~/components/SloganType'
+
 export default {
   components: {
     ContactForm,
-    VueTyper
+    SloganType
   },
   data() {
     return {
@@ -267,18 +203,6 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'bubble_chart',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
       pages: [
         {
           to: '/',
@@ -303,6 +227,18 @@ export default {
         {
           to: '/parceiros',
           name: 'Parceiros'
+        }
+      ],
+      items: [
+        {
+          icon: 'apps',
+          title: 'Welcome',
+          to: '/'
+        },
+        {
+          icon: 'bubble_chart',
+          title: 'Inspire',
+          to: '/inspire'
         }
       ],
       miniVariant: false,
@@ -374,24 +310,6 @@ export default {
   }
   .header .v-divider {
     border-color: rgba(236, 236, 239, 0.05)!important;
-  }
-  .header .slogan {
-    color: #fffeff;
-  }
-  @media only screen and (max-width: 600px) {
-    .header .slogan:first-child {
-      margin-top: -200px!important;
-      position: absolute;
-      top: 50%;
-    }
-    .header .slogan:last-child {
-      margin-top: 0px!important;
-      position: absolute;
-      top: 50%;
-    }
-    .header .slogan h1 {
-      font-size: 77px!important
-    }
   }
 
   .vue-typer .custom.char.typed {
