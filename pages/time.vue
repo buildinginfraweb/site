@@ -10,10 +10,10 @@
           Somos uma empresa<br><span class="primary--text font-weight-bold">totalmente diferente</span>
         </h3>
         <p class="grey--text text--darken-1">
-          Nós nos esforcamos para ser um perceiro que você pode confiar, independente do problema nos colocamos a disposição para ajudar a melhorar cada vez mais a funcionalidade da sua empresa.
+          Nós nos esforçamos para ser um parceiro que você possa confiar, independente do problema, colocamos a disposição um time técnico para ajudar.
         </p>
-        <p  class="grey--text text--darken-1">
-          Nos orgulhamos de não ser apenas o cada dos computadores e sim mais um membro da equipe, confiável e experiente que reflete sua paixão pelo seu negócioNos orgulhamos de não ser apenas o cada dos computadores e sim mais um membro da equipe, confiável e experiente que reflete sua paixão pelo seu negócio.
+        <p class="grey--text text--darken-1">
+          Nos orgulhamos de não ser apenas “o carinha dos computadores” e sim, membro de sua equipe, confiável e experiente que busca refletir as metas da empresa a qual prestamos serviços.
         </p>
       </v-flex>
     </v-layout>
