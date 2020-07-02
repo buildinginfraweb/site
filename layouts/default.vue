@@ -15,47 +15,11 @@
               <img src="/symbol-bg-branco.png" alt="" style="margin:auto;max-width:90px">
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile class="py-1">
+        <v-list-tile class="py-1" v-for="page in pages" :key="page.name">
           <v-list-tile-content>
             <v-list-tile-title>
-              <nuxt-link to="/">
-                Home
-              </nuxt-link>
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile class="py-1">
-          <v-list-tile-content>
-            <v-list-tile-title>
-              <nuxt-link to="/sobre">
-                Sobre Nós
-              </nuxt-link>
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile class="py-1">
-          <v-list-tile-content>
-            <v-list-tile-title>
-              <nuxt-link to="/time">
-                Nosso time
-              </nuxt-link>
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile class="py-1">
-          <v-list-tile-content>
-            <v-list-tile-title>
-              <nuxt-link to="/servicos">
-                Serviços
-              </nuxt-link>
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile class="py-1">
-          <v-list-tile-content>
-            <v-list-tile-title>
-              <nuxt-link to="/contato">
-                Contato
+              <nuxt-link :to="page.to">
+                {{ page.name }}
               </nuxt-link>
             </v-list-tile-title>
           </v-list-tile-content>
@@ -90,8 +54,8 @@
               </v-flex>
               <v-spacer></v-spacer>
               <v-flex shrink class="hidden-xs-only">
-                <v-btn class="elevation-0 support-btn" @click="$vuetify.goTo('#contact')">
-                  Suporte sob demanda
+                <v-btn class="elevation-0 support-btn" href="https://buildinginfrabr.sharepoint.com/sites/buildininfra/SitePages/Portal-de-Atendimento-ao-Cliente.aspx">
+                  Atendimento ao Cliente
                 </v-btn>
               </v-flex>
               <v-flex shrink class="hidden-sm-and-up">
@@ -110,29 +74,9 @@
           </v-flex>
         </v-layout>
         <v-layout px-4 row wrap class="hidden-xs-only">
-          <v-flex shrink px-3>
-            <nuxt-link to="/" class="selected">
-              Home
-            </nuxt-link>
-          </v-flex>
-          <v-flex px-3 shrink>
-            <nuxt-link to="/sobre">
-              Sobre Nós
-            </nuxt-link>
-          </v-flex>
-          <v-flex px-3 shrink>
-            <nuxt-link to="/time">
-              Nosso time
-            </nuxt-link>
-          </v-flex>
-          <v-flex px-3 shrink>
-            <nuxt-link to="/servicos">
-              Serviços
-            </nuxt-link>
-          </v-flex>
-          <v-flex px-3 shrink>
-            <nuxt-link to="/contato">
-              Contato
+          <v-flex px-3 shrink v-for="page in pages" :key="page.name">
+            <nuxt-link :to="page.to">
+              {{ page.name }}
             </nuxt-link>
           </v-flex>
         </v-layout>
@@ -217,7 +161,6 @@
           </v-flex>
         </v-layout>
         <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
-          <v-spacer></v-spacer>
           <v-flex shrink class="white--text">
             <h1 class="display-4 font-weight-bold">We do it</h1>
             <v-layout>
@@ -230,7 +173,40 @@
                 <h2 class="display-1">
                   <no-ssr>
                     <vue-typer
-                      :text='["relax...","sell...","enjoy...","grow..."]'
+                      :text='["relax... ","sell... ","enjoy...","grow...  "]'
+                      :repeat='Infinity'
+                      :shuffle='false'
+                      initial-action='erasing'
+                      :pre-type-delay='70'
+                      :type-delay='70'
+                      :pre-erase-delay='2000'
+                      :erase-delay='250'
+                      erase-style='backspace'
+                      :erase-on-complete='false'
+                      caret-animation='blink'
+                    ></vue-typer>
+                  </no-ssr>
+                </h2>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <v-spacer></v-spacer>
+        </v-layout>
+        <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
+          <v-spacer></v-spacer>
+          <v-flex shrink class="white--text">
+            <h1 class="display-4 font-weight-bold">Nós fazemos</h1>
+            <v-layout>
+              <v-flex shrink>
+                <h2 class="display-1">
+                  e você&nbsp;
+                </h2>
+              </v-flex>
+              <v-flex>
+                <h2 class="display-1">
+                  <no-ssr>
+                    <vue-typer
+                      :text='["relaxa...","vende...","curte...","cresce..."]'
                       :repeat='Infinity'
                       :shuffle='false'
                       initial-action='erasing'
@@ -259,29 +235,9 @@
     <v-container fluid pa-4 class="grey darken-4 footer text-xs-center">
       <v-layout :column="$vuetify.breakpoint.xs" wrap>
         <v-spacer></v-spacer>
-        <v-flex px-3 shrink>
-          <nuxt-link to="/">
-            Home
-          </nuxt-link>
-        </v-flex>
-        <v-flex px-3 shrink>
-          <nuxt-link to="/sobre">
-            Sobre Nós
-          </nuxt-link>
-        </v-flex>
-        <v-flex px-3 shrink>
-          <nuxt-link to="/time">
-            Nosso time
-          </nuxt-link>
-        </v-flex>
-        <v-flex px-3 shrink>
-          <nuxt-link to="/servicos">
-            Serviços
-          </nuxt-link>
-        </v-flex>
-        <v-flex px-3 shrink>
-          <nuxt-link to="/contato">
-            Contato
+        <v-flex px-3 shrink v-for="page in pages" :key="page.name">
+          <nuxt-link :to="page.to">
+            {{ page.name }}
           </nuxt-link>
         </v-flex>
         <v-spacer></v-spacer>
@@ -323,6 +279,32 @@ export default {
           to: '/inspire'
         }
       ],
+      pages: [
+        {
+          to: '/',
+          name: 'Home'
+        },
+        {
+          to: '/sobre',
+          name: 'Sobre Nós'
+        },
+        {
+          to: '/time',
+          name: 'Nosso time'
+        },
+        {
+          to: '/servicos',
+          name: 'Serviços'
+        },
+        {
+          to: '/contato',
+          name: 'Contato'
+        },
+        {
+          to: '/parceiros',
+          name: 'Parceiros'
+        }
+      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
@@ -338,9 +320,10 @@ export default {
         navigator.userAgent.match(/iPod/i) ||
         navigator.userAgent.match(/BlackBerry/i) ||
         navigator.userAgent.match(/Windows Phone/i)) {
-        window.open(`https://api.whatsapp.com/send?phone=5511989541137&text=Gostaria de algumas informações sobre:`, '_blank')
+          551143829676
+        window.open(`https://api.whatsapp.com/send?phone=551143829676&text=Gostaria de algumas informações sobre:`, '_blank')
       } else {
-        window.open(`https://web.whatsapp.com/send?phone=5511989541137&text=Gostaria de algumas informações sobre:`, '_blank')
+        window.open(`https://web.whatsapp.com/send?phone=551143829676&text=Gostaria de algumas informações sobre:`, '_blank')
       }
     }
   },
@@ -396,8 +379,13 @@ export default {
     color: #fffeff;
   }
   @media only screen and (max-width: 600px) {
-    .header .slogan {
-      margin-top: -100px!important;
+    .header .slogan:first-child {
+      margin-top: -200px!important;
+      position: absolute;
+      top: 50%;
+    }
+    .header .slogan:last-child {
+      margin-top: 0px!important;
       position: absolute;
       top: 50%;
     }
