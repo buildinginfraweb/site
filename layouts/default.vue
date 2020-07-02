@@ -262,17 +262,6 @@ export default {
         window.open(`https://web.whatsapp.com/send?phone=551143829676&text=Gostaria de algumas informações sobre:`, '_blank')
       }
     }
-  },
-  watch: {
-    $route (value) {
-      setTimeout(() => {
-        if (value.name === 'index') {
-          this.$vuetify.goTo('#main-section', {offset: 130})
-        }else {
-          this.$vuetify.goTo('#main-section', {offset: 30})
-        }
-      }, 300)
-    }
   }
 }
 </script>
