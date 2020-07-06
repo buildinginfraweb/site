@@ -1,5 +1,5 @@
 <template>
-  <v-container pb-0>
+  <v-container pb-0 fluid class="white">
     <v-layout mb-2>
       <v-flex class="grey--text text--darken-3  text-xs-center display-1">
         O que dizem sobre<br>

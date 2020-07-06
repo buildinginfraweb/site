@@ -1,18 +1,16 @@
 <template>
   <v-container>
     <v-layout mb-5>
-      <v-flex sm5 class="hidden-xs-only" mr-3 style="background-image: url(/img-pessoas.png);background-size: cover;background-position: center;">
-      </v-flex>
-      <v-flex xs12 sm7 pl-3 
+      <v-flex xs12 pl-3 
          data-aos="fade-left"
         data-aos-duration="500">
-        <h3 class="display-1 mb-3">
-          Somos uma empresa<br><span class="primary--text font-weight-bold">totalmente diferente</span>
+        <h3 class="display-3 mb-3 white--text font-weight-bold">
+          Somos uma empresa<br><span class="white primary--text px-2 font-weight-bold">Totalmente diferente</span>
         </h3>
-        <p class="grey--text text--darken-1">
+        <p class="white--text subheading text--darken-1">
           Nós nos esforçamos para ser um parceiro que você possa confiar, independente do problema, colocamos a disposição um time técnico para ajudar.
         </p>
-        <p class="grey--text text--darken-1">
+        <p class="white--text subheading text--darken-1">
           Nos orgulhamos de não ser apenas “o carinha dos computadores” e sim, membro de sua equipe, confiável e experiente que busca refletir as metas da empresa a qual prestamos serviços.
         </p>
       </v-flex>
@@ -22,30 +20,28 @@
         <v-container pa-0 fluid grid-list-md>
           <v-layout row wrap>
             <v-flex xs12 sm6 md4 v-for="(person, index) in team" :key="index" data-aos="fade">
-              <v-hover>
                 <v-card
-                  slot-scope="{ hover }"
-                  :class="`elevation-${hover && person.link !== '' ? 8 : 4}`"
-                  :href="person.link" style="border-radius: 8px;">
+                  class="transparent elevation-0"
+                  style="border-radius: 8px;">
                   <v-card-title class="text-xs-center">
                     <v-spacer></v-spacer>
                     <v-avatar size="150">
                       <v-img
+                        style="box-shadow: inset 0px 13px 17px 0px #d8d8d8;"
                         :src="person.image"
                       ></v-img>
                     </v-avatar>
                     <v-spacer></v-spacer>
                   </v-card-title>
                   <v-card-text class="text-xs-center">
-                    <h4 class="headline  font-weight-bold">
+                    <h4 class="headline white--text font-weight-bold">
                       {{ person.name }}
                     </h4>
-                    <p class="subheading">
+                    <p class="subheading white--text">
                       {{ person.job }}
                     </p>
                   </v-card-text>
                 </v-card>
-              </v-hover>
             </v-flex>
           </v-layout>
         </v-container>

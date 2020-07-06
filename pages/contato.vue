@@ -1,54 +1,46 @@
 <template>
-  <v-container>
+  <v-container class="main-content">
     <v-layout row wrap>
-      <v-flex xs12 sm6>
-         <h2 class="display-1 mb-5">
-          Entre em contato com a 
-          <br>
-          <span class="primary--text font-weight-bold">Building Infra</span>
-        </h2>
-        <!-- Rua Capitão Salinas, 281 - Sala 02 Jd. Universal - Barueri -->
-        <v-layout>
-          <v-flex class="title mb-2 grey--text text--darken-1">
-            Por email:
+      <v-flex xs12>
+        <h2 class="mb-5 white--text font-weight-bold text-xs-center" :class="[$vuetify.breakpoint.xsOnly ? 'display-1' : 'display-4', $vuetify.breakpoint.xsOnly ? 'pb-0' : 'pb-5']">Entre em contato</h2>
+        <v-layout row wrap class="text-xs-center">
+          <v-spacer></v-spacer>
+          <v-flex xs12 sm5 class="title mb-4 white--text text--darken-1">
+            <v-icon size="40" color="white"  class="mb-2">mail</v-icon>
+            <br />
+            <a
+              href="mailto:contato@buildinginfra.com.br"
+              style="text-decoration: none;"
+              class="white--text title"
+            >contato@buildinginfra.com.br</a>
           </v-flex>
+          <v-spacer></v-spacer>
+          <v-flex xs12 sm5 class="title mb-4 white--text text--darken-1">
+            <v-icon size="40" color="white" class="mb-2">phone</v-icon>
+            <br />
+            <a
+              href="tel:+551143829676"
+              style="text-decoration: none;"
+              class="white--text title"
+            >(11) 4382-9676</a>
+          </v-flex>
+          <v-spacer></v-spacer>
         </v-layout>
-        <v-layout align-center>
-          <v-flex shrink>
-            <v-icon small color="primary">
-              mail
-            </v-icon>
-          </v-flex>
-          <v-flex shrink class="pl-2">
-             <a href="mailto:contato@buildinginfra.com.br" style="text-decoration: none;" class="primary--text">
-              contato@buildinginfra.com.br
-            </a>
-          </v-flex>
-        </v-layout>
-        <v-layout align-center class="my-4">
-          <v-divider></v-divider>
-          <v-flex shrink class="px-4 grey--text">
-            ou
-          </v-flex>
-          <v-divider></v-divider>
+        <v-layout align-center class="my-5">
+          <v-spacer class="hidden-xs-only"></v-spacer>
+          <v-spacer class="hidden-xs-only"></v-spacer>
+          <v-divider class="white"></v-divider>
+          <v-flex shrink class="px-4 title white--text">ou</v-flex>
+          <v-divider class="white"></v-divider>
+          <v-spacer class="hidden-xs-only"></v-spacer>
           <v-spacer class="hidden-xs-only"></v-spacer>
         </v-layout>
         <v-layout>
-          <v-flex class="title mb-2 grey--text text--darken-1">
-            Pelo numero:
-          </v-flex>
-        </v-layout>
-        <v-layout align-center>
+          <v-spacer></v-spacer>
           <v-flex shrink>
-            <v-icon small color="primary">
-              phone
-            </v-icon>
+            <ContactDialog />
           </v-flex>
-          <v-flex shrink class="pl-2">
-             <a href="tel:+551143829676" style="text-decoration: none;" class="primary--text">
-              (11) 4382-9676
-            </a>
-          </v-flex>
+          <v-spacer></v-spacer>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -56,7 +48,11 @@
 </template>
 
 <script>
+import ContactDialog from '@/components/ContactDialog'
 export default {
+  components: {
+    ContactDialog
+  }
 }
 </script>
 

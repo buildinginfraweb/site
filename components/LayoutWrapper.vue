@@ -103,6 +103,12 @@ export default {
     ContactForm,
     FooterMenu
   },
+  props: {
+    banner: {
+      type: Number,
+      default: 1
+    }
+  },
   data() {
     return {
       drawer: false,

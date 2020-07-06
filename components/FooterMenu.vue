@@ -1,6 +1,6 @@
 <template>
   <v-container fluid pa-4 class="grey darken-4 footer text-xs-center">
-    <v-layout :column="$vuetify.breakpoint.xs" wrap>
+    <v-layout :column="$vuetify.breakpoint.xsOnly" wrap>
       <v-spacer></v-spacer>
       <v-flex px-3 shrink v-for="page in pages" :key="page.name">
         <nuxt-link :to="page.to">{{ page.name }}</nuxt-link>
