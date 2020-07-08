@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SloganType class="main-content px-0"/>
+    <SloganType />
+    <CommentsCarousel />
+
     <v-container fluid pa-0 pt-5>
       <v-layout class="over-banner" v-if="false">
         <v-flex xs12>
@@ -139,8 +141,7 @@
         </v-flex>
       </v-container>
       </v-layout>
-      <CommentsCarousel />
-       <contact-form id="contact" />
+      <contact-form id="contact" />
       <FooterMenu />
     </v-container>
   </div>

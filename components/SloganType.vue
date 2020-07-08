@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
+    <v-layout px-4 class="slogan">
       <v-flex shrink class="white--text">
-        <h1 class="display-4 font-weight-bold">We do it</h1>
+        <h1 class="font-weight-bold">We do it</h1>
         <v-layout>
           <v-flex shrink>
             <h2 class="display-1">
@@ -32,10 +32,10 @@
       </v-flex>
       <v-spacer></v-spacer>
     </v-layout>
-    <v-layout px-4 class="slogan mt-5 pt-4" v-if="true">
+    <v-layout px-4 class="slogan">
       <v-spacer></v-spacer>
       <v-flex shrink class="white--text">
-        <h1 class="display-4 font-weight-bold">Nós fazemos</h1>
+        <h1 class="font-weight-bold">Nós fazemos</h1>
         <v-layout>
           <v-flex shrink>
             <h2 class="display-1">
@@ -110,11 +110,23 @@ export default {
 </script>
 
 <style>
-  .header .slogan {
+  .slogan {
     color: #fffeff;
+    margin-bottom: 48px;
+  }
+  .slogan h1 {
+    font-size: 112px!important
+  }
+  .slogan:last-child {
+      margin-bottom: 12px;
   }
   @media only screen and (max-width: 600px) {
-    .header .slogan:first-child {
+    .slogan {
+      color: #fffeff;
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+    /* .header .slogan:first-child {
       margin-top: -200px!important;
       position: absolute;
       top: 50%;
@@ -123,8 +135,11 @@ export default {
       margin-top: 0px!important;
       position: absolute;
       top: 50%;
+    } */
+    .slogan:last-child {
+      margin-bottom: 12px;
     }
-    .header .slogan h1 {
+    .slogan h1 {
       font-size: 77px!important
     }
   }

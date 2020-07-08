@@ -22,6 +22,12 @@
         </div>
         <div class="header-image__img header-image__img--3" v-else-if="$route.name === 'time'">
         </div>
+        <div class="header-image__img header-image__img--4" v-else-if="$route.name === 'sobre'">
+        </div>
+        <div class="header-image__img header-image__img--5" v-else-if="$route.name === 'servicos'">
+        </div>
+        <div class="header-image__img header-image__img--6" v-else-if="$route.name === 'parceiros'">
+        </div>
         <div class="header-image__img  header-image__img--1" v-else>
         </div>
       </transition>
@@ -34,7 +40,7 @@
           <v-flex xs12>
             <v-layout align-center>
               <v-flex>
-                <img src="/logo.png" alt="Logo Building Infra" height="60px" />
+                <img src="/logo-mix.png" alt="Logo Building Infra" height="60px" />
               </v-flex>
               <v-spacer></v-spacer>
               <v-flex shrink class="hidden-xs-only">

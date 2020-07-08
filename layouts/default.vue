@@ -61,8 +61,17 @@ export default {
   .header-image__img--2 {
     background-image: url('/banner-2.jpeg');
   }
-    .header-image__img--3 {
+  .header-image__img--3 {
     background-image: url('/banner-3.jpg');
+  }
+  .header-image__img--4 {
+    background-image: url('/banner-4.jpg');
+  }
+  .header-image__img--5 {
+    background-image: url('/banner-5.jpg');
+  }
+  .header-image__img--6 {
+    background-image: url('/banner-6.jpg');
   }
 
   .header {

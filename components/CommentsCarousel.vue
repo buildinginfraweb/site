@@ -1,14 +1,14 @@
 <template>
-  <v-container pb-0 fluid class="white">
+  <v-container pb-0 fluid>
     <v-layout mb-2>
-      <v-flex class="grey--text text--darken-3  text-xs-center display-1">
+      <v-flex class="white--text text--darken-3 text-xs-center display-1 hidden-sm-and-up">
         O que dizem sobre<br>
-        nós da <span class="primary--text font-weight-bold" @click="first1()">Building Infra</span>
+        nós da <span class="no-wrap white primary--text px-3 font-weight-bold">Building Infra</span>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12 sm4 md4 style="opacity: 0.6" class="hidden-sm-and-down">
-        <v-carousel  height="360" :value="first" hide-controls hide-delimiters class="elevation-0" :cycle="false">
+        <v-carousel dark height="360" :value="first" hide-controls hide-delimiters class="elevation-0" :cycle="false">
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
               <v-layout>
@@ -21,16 +21,16 @@
                 <v-spacer></v-spacer>
               </v-layout>
               <v-layout row wrap>
-                <v-flex xs12 mt-3 class="text-xs-center">
+                <v-flex xs12 mt-3 class="white--text text-xs-center">
                   {{ client.comment }}
                 </v-flex>
-                <v-flex xs12 mt-3 class="text-xs-center">
-                  <v-icon color="primary">alternate_email</v-icon>
+                <v-flex xs12 mt-3 class="white--text text-xs-center">
+                  <v-icon color="white">alternate_email</v-icon>
                 </v-flex>
-                <v-flex xs12 mt-2 class="grey--text text-xs-center text--darken-3 font-weight-bold">
-                  <a :href="client.link" style="text-decoration:none">{{ client.name }}</a>
+                <v-flex xs12 mt-2 class="white--text text-xs-center text--darken-3 font-weight-bold">
+                  <a :href="client.link" class="white px-3 primary--text" target="_blank" style="text-decoration:none">{{ client.name }}</a>
                 </v-flex>
-                <v-flex xs12 class="grey--text text--ligthen-3 text-xs-center">
+                <v-flex xs12 class="white--text text--ligthen-3 text-xs-center">
                   {{ client.company }}
                 </v-flex>
               </v-layout>
@@ -39,7 +39,7 @@
         </v-carousel>
       </v-flex>
       <v-flex xs12 md4>
-        <v-carousel  height="360" :value="second" hide-controls hide-delimiters class="elevation-0" :cycle="false">
+        <v-carousel dark  height="360" :value="second" hide-controls hide-delimiters class="elevation-0" :cycle="false">
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
               <v-layout>
@@ -52,16 +52,16 @@
                 <v-spacer></v-spacer>
               </v-layout>
               <v-layout row wrap>
-                <v-flex xs12 mt-3 class="text-xs-center">
+                <v-flex xs12 mt-3 class="white--text text-xs-center">
                   {{ client.comment }}
                 </v-flex>
-                <v-flex xs12 mt-3 class="text-xs-center">
-                  <v-icon color="primary">alternate_email</v-icon>
+                <v-flex xs12 mt-3 class="white--text text-xs-center">
+                  <v-icon color="white">alternate_email</v-icon>
                 </v-flex>
-                <v-flex xs12 mt-2 class="grey--text text-xs-center text--darken-3 font-weight-bold">
-                  <a :href="client.link" style="text-decoration:none">{{ client.name }}</a>
+                <v-flex xs12 mt-2 class="white--text text-xs-center text--darken-3 font-weight-bold">
+                  <a :href="client.link" class="white px-3 primary--text" target="_blank" style="text-decoration:none">{{ client.name }}</a>
                 </v-flex>
-                <v-flex xs12 class="grey--text text--ligthen-3 text-xs-center">
+                <v-flex xs12 class="white--text text--ligthen-3 text-xs-center">
                   {{ client.company }}
                 </v-flex>
               </v-layout>
@@ -70,7 +70,7 @@
         </v-carousel>
       </v-flex>
       <v-flex xs12 sm4 md4 class="hidden-sm-and-down" style="opacity: 0.6">
-        <v-carousel  height="360" :value="third" hide-controls hide-delimiters class="elevation-0" :cycle="false">
+        <v-carousel dark height="360" :value="third" hide-controls hide-delimiters class="elevation-0" :cycle="false">
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
               <v-layout>
@@ -83,16 +83,16 @@
                 <v-spacer></v-spacer>
               </v-layout>
               <v-layout row wrap>
-                <v-flex xs12 mt-3 class="text-xs-center">
+                <v-flex xs12 mt-3 class="white--text text-xs-center">
                   {{ client.comment }}
                 </v-flex>
-                <v-flex xs12 mt-3 class="text-xs-center">
-                  <v-icon color="primary">alternate_email</v-icon>
+                <v-flex xs12 mt-3 class="white--text text-xs-center">
+                  <v-icon color="white">alternate_email</v-icon>
                 </v-flex>
-                <v-flex xs12 mt-2 class="grey--text text-xs-center text--darken-3 font-weight-bold">
-                  <a :href="client.link" target="_blank" style="text-decoration:none">{{ client.name }}</a>
+                <v-flex xs12 mt-2 class="white--text text-xs-center text--darken-3 font-weight-bold">
+                  <a :href="client.link" class="white px-3 primary--text" target="_blank" style="text-decoration:none">{{ client.name }}</a>
                 </v-flex>
-                <v-flex xs12 class="grey--text text--ligthen-3 text-xs-center">
+                <v-flex xs12 class="white--text text--ligthen-3 text-xs-center">
                   {{ client.company }}
                 </v-flex>
               </v-layout>
@@ -112,7 +112,7 @@ export default {
       comments: [
         {
           name: 'Renato Vicente Frison',
-          avatar: 'https://renato66.github.io/img/profile.png',
+          avatar: 'https://randomuser.me/api/portraits/med/men/64.jpg',
           link: 'https://renato66.github.io',
           comment: 'Gostei muito do profissionalismo, a comunicação foi perfeita para que tivessemos uma migração calma e tranquila',
           company: 'Freelancer'
