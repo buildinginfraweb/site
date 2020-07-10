@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/gtm": "^2.3.0",
     "@nuxtjs/pwa": "^2.6.0",
     "aos": "^2.3.4",
     "cross-env": "^5.2.0",
