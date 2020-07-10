@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-aos="fade-up">
     <SloganType />
     <CommentsCarousel />
 
@@ -141,23 +141,17 @@
         </v-flex>
       </v-container>
       </v-layout>
-      <contact-form id="contact" />
-      <FooterMenu />
     </v-container>
   </div>
 </template>
   
 <script>
 
-import ContactForm from '~/components/ContactForm'
-import FooterMenu from '~/components/FooterMenu'
 import SloganType from '~/components/SloganType'
 import CommentsCarousel from '~/components/CommentsCarousel'
 
 export default {
   components: {
-    ContactForm,
-    FooterMenu,
     CommentsCarousel,
     SloganType
   },

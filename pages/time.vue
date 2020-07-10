@@ -1,10 +1,11 @@
 <template>
   <v-container>
     <v-layout mb-5>
-      <v-flex xs12 pl-3 
+      <v-flex xs12
+      class="text-xs-center"
          data-aos="fade-left"
         data-aos-duration="500">
-        <h3 class="display-3 mb-3 white--text font-weight-bold">
+        <h3 class="display-1 mb-3 white--text font-weight-bold">
           Somos uma empresa<br><span class="white primary--text px-2 font-weight-bold">Totalmente diferente</span>
         </h3>
         <p class="white--text subheading text--darken-1">
@@ -19,7 +20,7 @@
       <v-flex xs12>
         <v-container pa-0 fluid grid-list-md>
           <v-layout row wrap>
-            <v-flex xs12 sm6 md4 v-for="(person, index) in team" :key="index" data-aos="fade">
+            <v-flex xs12 sm6 md4 v-for="(person, index) in team" :key="index" data-aos="fade-up">
                 <v-card
                   class="transparent elevation-0"
                   style="border-radius: 8px;">

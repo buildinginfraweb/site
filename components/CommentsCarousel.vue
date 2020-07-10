@@ -8,7 +8,7 @@
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12 sm4 md4 style="opacity: 0.6" class="hidden-sm-and-down">
-        <v-carousel dark height="360" :value="first" hide-controls hide-delimiters class="elevation-0" :cycle="false">
+        <v-carousel dark height="360" :value="first" hide-controls hide-delimiters class="elevation-0"  :cycle="false">
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
               <v-layout>
@@ -70,7 +70,7 @@
         </v-carousel>
       </v-flex>
       <v-flex xs12 sm4 md4 class="hidden-sm-and-down" style="opacity: 0.6">
-        <v-carousel dark height="360" :value="third" hide-controls hide-delimiters class="elevation-0" :cycle="false">
+        <v-carousel dark height="360" :value="third" hide-controls hide-delimiters class="elevation-0"  :cycle="false">
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
               <v-layout>
@@ -108,7 +108,9 @@
 export default {
   data () {
     return {
+      unactiveFirst: 1,
       activeCommentary: 2,
+      unactiveLast: 0,
       comments: [
         {
           name: 'Renato Vicente Frison',
@@ -136,33 +138,30 @@ export default {
   },
   methods: {
     play (value) {
-      if (value + 1 === this.comments.length) {
-        return 0
-      } else if (value + 1 > this.comments.length) {
-        return value - this.comments.length + 1
-      } else {
-        return value + 1
+      if (value === this.comments.length) {
+        return 1
       }
+      return value + 1
     }
   },
   computed: {
     first () {
-      return this.play(this.activeCommentary) + 1
+      return this.unactiveFirst
     },
     second () {
-      return this.play(this.activeCommentary + 1) + 1
+      return this.activeCommentary
     },
     third () {
-      return this.play(this.activeCommentary + 2) + 1
+      return this.unactiveLast
     }
   },
-  mounted () {
+  async mounted () {
+    this.unactiveLast = 3
     setInterval(() => {
+      this.unactiveFirst = this.play(this.unactiveFirst)
       this.activeCommentary = this.play(this.activeCommentary)
+      this.unactiveLast = this.play(this.unactiveLast)
     }, 5000)
-    setTimeout(() => {
-      this.activeCommentary = this.play(this.activeCommentary)
-    }, 100)
   }
 }
 </script>

@@ -2,8 +2,12 @@
   <v-container class="main-content">
     <v-layout row wrap>
       <v-flex xs12>
-        <h2 class="mb-5 white--text font-weight-bold text-xs-center" :class="[$vuetify.breakpoint.xsOnly ? 'display-1' : 'display-4', $vuetify.breakpoint.xsOnly ? 'pb-0' : 'pb-5']">Entre em contato</h2>
-        <v-layout row wrap class="text-xs-center">
+        <v-flex xs12 class="white--text text-xs-center" data-aos="fade-right">
+          <h2 class="display-1 mb-5">
+            Entre em <span class="white px-2 primary--text font-weight-bold">contato</span> conosco agora<br> agende uma visita comercial
+          </h2>
+        </v-flex>
+        <v-layout row wrap class="text-xs-center"  data-aos="fade-up" >
           <v-spacer></v-spacer>
           <v-flex xs12 sm5 class="title mb-4 white--text text--darken-1">
             <v-icon size="40" color="white"  class="mb-2">mail</v-icon>
@@ -26,7 +30,7 @@
           </v-flex>
           <v-spacer></v-spacer>
         </v-layout>
-        <v-layout align-center class="my-5">
+        <v-layout align-center class="my-5"  data-aos="fade-up" >
           <v-spacer class="hidden-xs-only"></v-spacer>
           <v-spacer class="hidden-xs-only"></v-spacer>
           <v-divider class="white"></v-divider>
@@ -35,7 +39,7 @@
           <v-spacer class="hidden-xs-only"></v-spacer>
           <v-spacer class="hidden-xs-only"></v-spacer>
         </v-layout>
-        <v-layout>
+        <v-layout  data-aos="fade-up" >
           <v-spacer></v-spacer>
           <v-flex shrink>
             <ContactDialog />

@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container data-aos="fade-right" >
     <v-layout mb-5>
-      <v-flex xs12 sm7 pr-3 data-aos="fade-right" data-aos-duration="500">
+      <v-flex xs12 class="text-xs-center" >
         <h3 class="display-1  white--text mb-3">
           Soluções em infraestrutura,
           <br />isso é
@@ -16,22 +16,6 @@
         <p
           class="white--text text--darken-1"
         >Vamos além de suporte ao usuário e manutenção computadores também nos especializamos em Projetos de infraestrutura de Rede e Dados, Segurança na internet, LGPD, Microsoft 365, Segurança em CoWorking/HomeOffice e Treinamentos.</p>
-      </v-flex>
-      <v-flex
-        sm5
-        class="hidden-xs-only"
-        ml-3
-        style="background-image: url(/img-sobre-1.jpg);background-size: cover;background-position: center;"
-      ></v-flex>
-    </v-layout>
-    <v-layout mb-5 class="">
-      <v-flex
-        sm5
-        class="hidden-xs-only"
-        mr-3
-        style="background-image: url(/sobre-2.jpg);background-size: cover;background-position: center;"
-      ></v-flex>
-      <v-flex xs12 sm7 pl-3 data-aos="fade-left" data-aos-duration="500">
         <p class="white--text text--darken-1">Para BuildingInfra cada cliente é um parceiro, e queremos mostrar ao cliente que nós vamos além de um prestador de serviço, buscamos fazer parte de sua equipe, com transparência fornecemos nossas ideias e soluções e estamos dispostos a arregaçar as mangas para fazer o melhor para aproximar ainda mais do sucesso que nossos clientes buscam.</p>
       </v-flex>
     </v-layout>

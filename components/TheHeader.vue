@@ -18,11 +18,11 @@
     </v-navigation-drawer>
     <div class="header-image">
       <transition name="component-fade" mode="out-in">
-        <div class="header-image__img header-image__img--2" v-if="$route.name === 'contato'">
+        <div class="header-image__img header-image__img--2" v-if="$route.name === 'sobre'">
         </div>
         <div class="header-image__img header-image__img--3" v-else-if="$route.name === 'time'">
         </div>
-        <div class="header-image__img header-image__img--4" v-else-if="$route.name === 'sobre'">
+        <div class="header-image__img header-image__img--4" v-else-if="$route.name === 'contato'">
         </div>
         <div class="header-image__img header-image__img--5" v-else-if="$route.name === 'servicos'">
         </div>
@@ -96,12 +96,12 @@ export default {
           name: 'Serviços'
         },
         {
-          to: '/contato',
-          name: 'Contato'
-        },
-        {
           to: '/parceiros',
           name: 'Parceiros'
+        },
+        {
+          to: '/contato',
+          name: 'Contato'
         }
       ]
     }
