@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout px-4 class="slogan">
+    <v-layout px-5 class="slogan">
       <v-flex shrink class="white--text">
         <h1 class="font-weight-bold">We do it</h1>
         <v-layout>
@@ -32,7 +32,7 @@
       </v-flex>
       <v-spacer></v-spacer>
     </v-layout>
-    <v-layout px-4 class="slogan">
+    <v-layout px-5 class="slogan">
       <v-spacer></v-spacer>
       <v-flex shrink class="white--text">
         <h1 class="font-weight-bold">Nós fazemos</h1>

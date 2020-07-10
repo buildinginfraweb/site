@@ -1,6 +1,6 @@
 <template>
   <v-container data-aos="fade-right" >
-    <v-layout mb-5>
+    <v-layout mb-5 px-4>
       <v-flex xs12 class="text-xs-center" >
         <h3 class="display-1  white--text mb-3">
           Soluções em infraestrutura,
@@ -19,7 +19,7 @@
         <p class="white--text text--darken-1">Para BuildingInfra cada cliente é um parceiro, e queremos mostrar ao cliente que nós vamos além de um prestador de serviço, buscamos fazer parte de sua equipe, com transparência fornecemos nossas ideias e soluções e estamos dispostos a arregaçar as mangas para fazer o melhor para aproximar ainda mais do sucesso que nossos clientes buscam.</p>
       </v-flex>
     </v-layout>
-    <v-layout row wrap>
+    <v-layout row wrap px-4>
       <v-flex xs12 sm6>
         <v-layout>
       <v-flex>
