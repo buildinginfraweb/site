@@ -1,22 +1,46 @@
 <template>
   <v-container pb-0 fluid>
     <v-layout mb-2>
-      <v-flex class="white--text text--darken-3 text-xs-center display-1 hidden-sm-and-up">
-        O que dizem sobre<br>
-        nós da <span class="no-wrap white primary--text px-3 font-weight-bold">Building Infra</span>
+      <v-flex
+        class="white--text text--darken-3 text-xs-center display-1 hidden-sm-and-up"
+      >
+        O que dizem sobre<br />
+        nós da
+        <span class="no-wrap white primary--text px-3 font-weight-bold"
+          >Building Infra</span
+        >
       </v-flex>
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12 sm4 md4 style="opacity: 0.6" class="hidden-sm-and-down">
-        <v-carousel dark height="360" :value="first" hide-controls hide-delimiters class="elevation-0"  :cycle="false">
+        <v-carousel
+          dark
+          height="370"
+          :value="first"
+          hide-controls
+          hide-delimiters
+          class="elevation-0"
+          :cycle="false"
+        >
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
-              <v-layout>
+              <v-layout class="px-4 white">
                 <v-spacer></v-spacer>
                 <v-flex shrink>
-                  <v-avatar size="60">
-                    <img :src="client.avatar" alt="">
-                  </v-avatar>
+                  <a
+                    :href="client.link"
+                    class="white px-3 primary--text"
+                    target="_blank"
+                    style="text-decoration:none"
+                  >
+                    <v-img
+                      contain
+                      height="150"
+                      width="200"
+                      :src="client.logo"
+                      alt="Logo"
+                    ></v-img>
+                  </a>
                 </v-flex>
                 <v-spacer></v-spacer>
               </v-layout>
@@ -27,11 +51,21 @@
                 <v-flex xs12 mt-3 class="white--text text-xs-center">
                   <v-icon color="white">alternate_email</v-icon>
                 </v-flex>
-                <v-flex xs12 mt-2 class="white--text text-xs-center text--darken-3 font-weight-bold">
-                  <a :href="client.link" class="white px-3 primary--text" target="_blank" style="text-decoration:none">{{ client.name }}</a>
+                <v-flex
+                  xs12
+                  mt-2
+                  class="white--text text-xs-center text--darken-3 font-weight-bold"
+                >
+                  <a
+                    :href="client.link"
+                    class="white px-3 py-1 primary--text"
+                    target="_blank"
+                    style="text-decoration:none"
+                    >{{ client.company }}</a
+                  >
                 </v-flex>
                 <v-flex xs12 class="white--text text--ligthen-3 text-xs-center">
-                  {{ client.company }}
+                  {{ client.name }}
                 </v-flex>
               </v-layout>
             </v-container>
@@ -39,15 +73,34 @@
         </v-carousel>
       </v-flex>
       <v-flex xs12 md4>
-        <v-carousel dark  height="360" :value="second" hide-controls hide-delimiters class="elevation-0" :cycle="false">
+        <v-carousel
+          dark
+          height="370"
+          :value="second"
+          hide-controls
+          hide-delimiters
+          class="elevation-0"
+          :cycle="false"
+        >
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
-              <v-layout>
+              <v-layout class="px-4 white elevation-3">
                 <v-spacer></v-spacer>
                 <v-flex shrink>
-                  <v-avatar size="60">
-                    <img :src="client.avatar" alt="">
-                  </v-avatar>
+                  <a
+                    :href="client.link"
+                    class="white px-3 primary--text"
+                    target="_blank"
+                    style="text-decoration:none"
+                  >
+                    <v-img
+                      contain
+                      height="150"
+                      width="200"
+                      :src="client.logo"
+                      alt="Logo"
+                    ></v-img>
+                  </a>
                 </v-flex>
                 <v-spacer></v-spacer>
               </v-layout>
@@ -58,11 +111,21 @@
                 <v-flex xs12 mt-3 class="white--text text-xs-center">
                   <v-icon color="white">alternate_email</v-icon>
                 </v-flex>
-                <v-flex xs12 mt-2 class="white--text text-xs-center text--darken-3 font-weight-bold">
-                  <a :href="client.link" class="white px-3 primary--text" target="_blank" style="text-decoration:none">{{ client.name }}</a>
+                <v-flex
+                  xs12
+                  mt-2
+                  class="white--text text-xs-center text--darken-3 font-weight-bold"
+                >
+                  <a
+                    :href="client.link"
+                    class="white px-3 py-1 primary--text"
+                    target="_blank"
+                    style="text-decoration:none"
+                    >{{ client.company }}</a
+                  >
                 </v-flex>
                 <v-flex xs12 class="white--text text--ligthen-3 text-xs-center">
-                  {{ client.company }}
+                  {{ client.name }}
                 </v-flex>
               </v-layout>
             </v-container>
@@ -70,15 +133,34 @@
         </v-carousel>
       </v-flex>
       <v-flex xs12 sm4 md4 class="hidden-sm-and-down" style="opacity: 0.6">
-        <v-carousel dark height="360" :value="third" hide-controls hide-delimiters class="elevation-0"  :cycle="false">
+        <v-carousel
+          dark
+          height="370"
+          :value="third"
+          hide-controls
+          hide-delimiters
+          class="elevation-0"
+          :cycle="false"
+        >
           <v-carousel-item v-for="(client, index) in comments" :key="index">
             <v-container>
-              <v-layout>
+              <v-layout class="px-4 white">
                 <v-spacer></v-spacer>
                 <v-flex shrink>
-                  <v-avatar size="60">
-                    <img :src="client.avatar" alt="">
-                  </v-avatar>
+                  <a
+                    :href="client.link"
+                    class="white px-3 primary--text"
+                    target="_blank"
+                    style="text-decoration:none"
+                  >
+                    <v-img
+                      contain
+                      height="150"
+                      width="200"
+                      :src="client.logo"
+                      alt="Logo"
+                    ></v-img>
+                  </a>
                 </v-flex>
                 <v-spacer></v-spacer>
               </v-layout>
@@ -89,11 +171,21 @@
                 <v-flex xs12 mt-3 class="white--text text-xs-center">
                   <v-icon color="white">alternate_email</v-icon>
                 </v-flex>
-                <v-flex xs12 mt-2 class="white--text text-xs-center text--darken-3 font-weight-bold">
-                  <a :href="client.link" class="white px-3 primary--text" target="_blank" style="text-decoration:none">{{ client.name }}</a>
+                <v-flex
+                  xs12
+                  mt-2
+                  class="white--text text-xs-center text--darken-3 font-weight-bold"
+                >
+                  <a
+                    :href="client.link"
+                    class="white px-3 py-1 primary--text"
+                    target="_blank"
+                    style="text-decoration:none"
+                    >{{ client.company }}</a
+                  >
                 </v-flex>
                 <v-flex xs12 class="white--text text--ligthen-3 text-xs-center">
-                  {{ client.company }}
+                  {{ client.name }}
                 </v-flex>
               </v-layout>
             </v-container>
@@ -106,38 +198,39 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       unactiveFirst: 1,
       activeCommentary: 2,
       unactiveLast: 0,
       comments: [
         {
-          name: 'Renato Vicente Frison',
-          avatar: 'https://randomuser.me/api/portraits/med/men/64.jpg',
-          link: 'https://renato66.github.io',
-          comment: 'Gostei muito do profissionalismo, a comunicação foi perfeita para que tivessemos uma migração calma e tranquila',
-          company: 'Freelancer'
+          name: '',
+          logo: '/parceiros/AprecieCafВ.png',
+          link: 'https://apreciecafe.com.br',
+          comment: 'Profissionais educados, proativos e muito atenciosos.',
+          company: 'Aprecie Café'
         },
         {
-          name: 'Camila Azevedo Marques',
-          avatar: 'https://randomuser.me/api/portraits/med/women/65.jpg',
-          link: 'https://google.com.br',
-          comment: 'Lorem ipsum dolor magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-          company: 'Google Inc.'
+          name: '',
+          logo: '/parceiros/BogAdvogados.jpg',
+          link: 'https://www.bog.adv.br',
+          comment:
+            'A melhor parte é a disponibilidade em atender! Sempre à disposição. Bom astral também! Isso traz segurança.',
+          company: 'Bog Advogados'
         },
         {
-          name: 'Bruna Dalaqua Silva',
-          avatar: 'https://randomuser.me/api/portraits/med/women/75.jpg',
-          link: 'https://google.com.br',
-          comment: 'Drud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-          company: 'Amazon'
+          name: '',
+          logo: '/parceiros/SouzaeTerra.png',
+          link: 'https://www.set.adv.br',
+          comment: 'Atendimento remoto de qualidade.',
+          company: 'Souza & Terra'
         }
       ]
     }
   },
   methods: {
-    play (value) {
+    play(value) {
       if (value === this.comments.length) {
         return 1
       }
@@ -145,17 +238,17 @@ export default {
     }
   },
   computed: {
-    first () {
+    first() {
       return this.unactiveFirst
     },
-    second () {
+    second() {
       return this.activeCommentary
     },
-    third () {
+    third() {
       return this.unactiveLast
     }
   },
-  async mounted () {
+  async mounted() {
     this.unactiveLast = 3
     setInterval(() => {
       this.unactiveFirst = this.play(this.unactiveFirst)
