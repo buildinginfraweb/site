@@ -198,35 +198,16 @@
 
 <script>
 export default {
+  props: {
+    comments: {
+      type: Array,
+    }
+  },
   data() {
     return {
       unactiveFirst: 1,
       activeCommentary: 2,
-      unactiveLast: 0,
-      comments: [
-        {
-          name: '',
-          logo: '/parceiros/AprecieCafВ.png',
-          link: 'https://apreciecafe.com.br',
-          comment: 'Profissionais educados, proativos e muito atenciosos.',
-          company: 'Aprecie Café'
-        },
-        {
-          name: '',
-          logo: '/parceiros/BogAdvogados.jpg',
-          link: 'https://www.bog.adv.br',
-          comment:
-            'A melhor parte é a disponibilidade em atender! Sempre à disposição. Bom astral também! Isso traz segurança.',
-          company: 'Bog Advogados'
-        },
-        {
-          name: '',
-          logo: '/parceiros/SouzaeTerra.png',
-          link: 'https://www.set.adv.br',
-          comment: 'Atendimento remoto de qualidade.',
-          company: 'Souza & Terra'
-        }
-      ]
+      unactiveLast: 0
     }
   },
   methods: {
