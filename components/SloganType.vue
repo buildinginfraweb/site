@@ -77,7 +77,7 @@ export default {
     VueTyper
   },
   computed: {
-    pages () {
+    pages() {
       return [
         {
           to: '/',
@@ -110,23 +110,23 @@ export default {
 </script>
 
 <style>
+.slogan {
+  color: #fffeff;
+  margin-bottom: 48px;
+}
+.slogan h1 {
+  font-size: 112px !important;
+}
+.slogan:last-child {
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 600px) {
   .slogan {
     color: #fffeff;
-    margin-bottom: 48px;
+    margin-top: 0px;
+    padding-top: 0px;
   }
-  .slogan h1 {
-    font-size: 112px!important
-  }
-  .slogan:last-child {
-      margin-bottom: 12px;
-  }
-  @media only screen and (max-width: 600px) {
-    .slogan {
-      color: #fffeff;
-      margin-top: 0px;
-      padding-top: 0px;
-    }
-    /* .header .slogan:first-child {
+  /* .header .slogan:first-child {
       margin-top: -200px!important;
       position: absolute;
       top: 50%;
@@ -136,11 +136,31 @@ export default {
       position: absolute;
       top: 50%;
     } */
-    .slogan:last-child {
-      margin-bottom: 12px;
-    }
-    .slogan h1 {
-      font-size: 77px!important
-    }
+  .slogan:last-child {
+    margin-bottom: 12px;
   }
+  .slogan h1 {
+    font-size: 77px !important;
+  }
+}
+@media only screen and (max-width: 408px) {
+  .slogan h1 {
+    font-size: 42px !important;
+  }
+}
+@media only screen and (max-width: 365px) {
+  .slogan h2 {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .slogan h2 {
+    font-size: 28px !important;
+  }
+}
+@media only screen and (max-width: 326px) {
+  .slogan h2 {
+    font-size: 26px !important;
+  }
+}
 </style>
