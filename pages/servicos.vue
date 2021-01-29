@@ -5,14 +5,16 @@
         <v-flex xs12 class="white--text text-xs-center" data-aos="fade-right">
           <h2 class="display-1 mb-3">
             Adminstração
-            <span class="white px-2 primary--text font-weight-bold">Terceirizada</span>
+            <span class="white px-2 primary--text font-weight-bold"
+              >Terceirizada</span
+            >
           </h2>
           <p class="title white--text text--darken-1 font-weight-bold mb-5">
             Gerenciamento completo do depertamento de tecnologia
           </p>
           <p class="subheading white--text text--darken-1 mt-5">
             Desde do planejamento ao suporte técnico deixa com a B.I.
-            <br>
+            <br />
             Nossos serviços gerenciais:
           </p>
           <p class="mt-5 pt-5">
@@ -23,11 +25,48 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container id="services" pa-0 fluid style="max-width: 1200px" v-if="display">
+    <v-container
+      id="services"
+      pa-0
+      fluid
+      style="max-width: 1200px"
+      v-if="display"
+    >
       <v-layout row wrap justify-space-between>
-        <v-flex xs12 sm6 md4 v-for="(card, index) in servicos" :key="index" data-aos="flip-left">
-          <v-img :src="card.image" :alt="card.alt" />
-        </v-flex>
+        <v-flex
+          xs12
+          sm6
+          md4
+          v-for="(card, index) in servicesList"
+          :key="index"
+          data-aos="flip-left"
+        >
+          <v-img class="blured-bg" :src="`${location}${card.img}`" contain :alt="card.title">
+            <v-container class="mt-5">
+              <v-layout>
+                <v-spacer></v-spacer>
+                <v-flex shrink class="card-container__headline">
+                  {{ card.headline }}
+                </v-flex>
+                <v-spacer></v-spacer>
+              </v-layout>
+              <v-layout class="my-2">
+                <v-spacer></v-spacer>
+                <v-flex shrink class="card-container__title">
+                  {{ card.title }}
+                </v-flex>
+                <v-spacer></v-spacer>
+              </v-layout>
+              <v-layout>
+                <v-spacer></v-spacer>
+                <v-flex shrink class="card-container__description">
+                  {{ card.description }}
+                </v-flex>
+                <v-spacer></v-spacer>
+              </v-layout>
+            </v-container>
+          </v-img>
+          </v-flex>
       </v-layout>
     </v-container>
   </div>
@@ -35,9 +74,75 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       display: false,
+      servicesList: [
+        {
+          headline: 'Planejamento',
+          title: 'Estratégico',
+          description: 'analise dos cenários, Macro e Micro Tecnológos',
+          img: '1.jpg'
+        },
+        {
+          headline: 'Para cada caso uma',
+          title: 'Solução Personalizada',
+          description: 'tudo para que você seja bem atendido.',
+          img: '2.jpg'
+        },
+        {
+          headline: 'Técnicos',
+          title: 'In Loco',
+          description: 'entendendo o seu negócio e fazendo muito por ele',
+          img: '3.jpg'
+        },
+        {
+          headline: 'Implementação de',
+          title: 'Infraestrutura',
+          description: 'analise dos cenário Macro e Micro Economicos',
+          img: '4.jpg'
+        },
+        {
+          headline: 'Todo apoio no',
+          title: 'Service Desk',
+          description:
+            'implementação, manutenção e monitoramento de servidores (WINDOWS / LINUX)',
+          img: '5.jpg'
+        },
+        {
+          headline: 'Helpdesk:',
+          title: 'Conhecer o cliente',
+          description:
+            'e descobrir nescessidades e encontrar melhores soluções',
+          img: '6.jpg'
+        },
+        {
+          headline: 'Treinamento',
+          title: 'Corporativo',
+          description:
+            'melhores praticas online, dicas de segurança e proteção de dados',
+          img: '7.jpg'
+        },
+        {
+          headline: 'Todo foco para',
+          title: 'Gestão de Produtos',
+          description: 'e serviços terceiros.',
+          img: '8.jpg'
+        },
+        {
+          headline: 'Gestão de documentação, licenciamento e',
+          title: 'Parque tecnológico',
+          description: 'cuidamos de todo o seu negócio',
+          img: '9.jpg'
+        },
+        {
+          headline: 'Sem sustos',
+          title: 'Taxa mensal',
+          description:
+            'à preço fixo, você sabe o que está pagando, sem "surpresinhas"',
+          img: '10.jpg'
+        }
+      ],
       servicos: [
         {
           image: '/planejamento.jpg',
@@ -86,16 +191,37 @@ export default {
       ]
     }
   },
+  computed: {
+    location () {
+      // return 'building-infra.netlify.app/servicos/'
+      return window.location.href
+    }
+  },
   methods: {
-    async showServices () {
-      this.display = true;
+    async showServices() {
+      this.display = true
       await new Promise(resolve => setTimeout(resolve, 300))
-      this.$vuetify.goTo('#services', {offset: 0})
+      this.$vuetify.goTo('#services', { offset: 0 })
     }
   }
 }
 </script>
 
 <style>
-
+.blured-bg .v-responsive__content{
+  background: #40475a9e;
+}
+.card-container__headline,
+.card-container__title,
+.card-container__description {
+  text-align: center;
+  color:#f8f9f5
+}
+.card-container__description,
+.card-container__headline {
+  font-size: 16px;
+}
+.card-container__title {
+  font-size: 32px;
+}
 </style>
