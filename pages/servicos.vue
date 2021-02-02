@@ -41,16 +41,21 @@
           :key="index"
           data-aos="flip-left"
         >
-          <v-img class="blured-bg" :src="`${location}${card.img}`" contain :alt="card.title">
-            <v-container class="mt-5">
-              <v-layout>
+          <v-img
+            class="blured-bg"
+            :src="`${location}/${card.img}`"
+            contain
+            :alt="card.title"
+          >
+            <v-container class="card-container">
+              <v-layout class="mt-5">
                 <v-spacer></v-spacer>
                 <v-flex shrink class="card-container__headline">
                   {{ card.headline }}
                 </v-flex>
                 <v-spacer></v-spacer>
               </v-layout>
-              <v-layout class="my-2">
+              <v-layout>
                 <v-spacer></v-spacer>
                 <v-flex shrink class="card-container__title">
                   {{ card.title }}
@@ -59,14 +64,13 @@
               </v-layout>
               <v-layout>
                 <v-spacer></v-spacer>
-                <v-flex shrink class="card-container__description">
-                  {{ card.description }}
+                <v-flex shrink class="card-container__description" v-html="card.description">
                 </v-flex>
                 <v-spacer></v-spacer>
               </v-layout>
             </v-container>
           </v-img>
-          </v-flex>
+        </v-flex>
       </v-layout>
     </v-container>
   </div>
@@ -87,7 +91,7 @@ export default {
         {
           headline: 'Para cada caso uma',
           title: 'Solução Personalizada',
-          description: 'tudo para que você seja bem atendido.',
+          description: 'tudo para que você seja<br>bem atendido.',
           img: '2.jpg'
         },
         {
@@ -192,7 +196,7 @@ export default {
     }
   },
   computed: {
-    location () {
+    location() {
       // return 'building-infra.netlify.app/servicos/'
       return window.location.href
     }
@@ -208,20 +212,26 @@ export default {
 </script>
 
 <style>
-.blured-bg .v-responsive__content{
-  background: #40475a9e;
+.blured-bg .v-responsive__content {
+  background: rgb(55 68 103 / 0.7);
+}
+.card-container {
+  padding:  75px 12px 0px 13px
 }
 .card-container__headline,
 .card-container__title,
 .card-container__description {
   text-align: center;
-  color:#f8f9f5
+  color: #ced1da;
 }
 .card-container__description,
 .card-container__headline {
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: -3px;
 }
 .card-container__title {
-  font-size: 32px;
+  font-size: 34px;
+  margin-top: -7px;
+  letter-spacing: 1.2px;
 }
 </style>
