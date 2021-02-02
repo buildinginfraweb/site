@@ -34,6 +34,8 @@ export default {
       { rel: 'manifest', href: '/icon/manifest.json' },
       { rel: 'icon', type: 'image/x-icon', href: '/icon/favicon.ico?v=2' },
       {
+        media:"print",
+        onload:"this.onload=null;this.removeAttribute('media');",
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
