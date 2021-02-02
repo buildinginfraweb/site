@@ -47,7 +47,7 @@
                 <v-btn
                   class="elevation-0 support-btn"
                   href="https://buildinginfrabr.sharepoint.com/sites/buildininfra/SitePages/Portal-de-Atendimento-ao-Cliente.aspx"
-                >Atendimento ao Cliente</v-btn>
+                >ÁREA DE CLIENTE</v-btn>
               </v-flex>
               <v-flex shrink class="hidden-sm-and-up">
                 <v-btn color="white" icon flat @click="drawer = true">

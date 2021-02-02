@@ -1,22 +1,22 @@
 <template>
   <v-container data-aos="fade-right" >
     <v-layout mb-5 px-4>
-      <v-flex xs12 class="text-xs-center" >
-        <h3 class="display-1  white--text mb-3">
+      <v-flex xs12>
+        <h3 class="display-1  white--text mb-3 text-xs-center">
           Soluções em infraestrutura,
           <br />isso é
           <span class="primary--text white px-2 font-weight-bold">BuildingInfra</span>
         </h3>
         <p
-          class="white--text text--darken-1"
+          class="white--text text--darken-1 text-xs-justify"
         >A segurança de rede não é mais um luxo para as grandes corporações e sim uma necessidade.</p>
         <p
-          class="white--text text--darken-1"
+          class="white--text text--darken-1 text-xs-justify"
         >Nossa abordagem proativa e vigilante garante que a infraestrutura de sua empresa esteja atualizada e protegida contra ameaças.</p>
         <p
-          class="white--text text--darken-1"
+          class="white--text text--darken-1 text-xs-justify"
         >Vamos além de suporte ao usuário e manutenção computadores também nos especializamos em Projetos de infraestrutura de Rede e Dados, Segurança na internet, LGPD, Microsoft 365, Segurança em CoWorking/HomeOffice e Treinamentos.</p>
-        <p class="white--text text--darken-1">Para BuildingInfra cada cliente é um parceiro, e queremos mostrar ao cliente que nós vamos além de um prestador de serviço, buscamos fazer parte de sua equipe, com transparência fornecemos nossas ideias e soluções e estamos dispostos a arregaçar as mangas para fazer o melhor para aproximar ainda mais do sucesso que nossos clientes buscam.</p>
+        <p class="white--text text--darken-1 text-xs-justify">Para BuildingInfra cada cliente é um parceiro, e queremos mostrar ao cliente que nós vamos além de um prestador de serviço, buscamos fazer parte de sua equipe, com transparência fornecemos nossas ideias e soluções e estamos dispostos a arregaçar as mangas para fazer o melhor para aproximar ainda mais do sucesso que nossos clientes buscam.</p>
       </v-flex>
     </v-layout>
     <v-layout row wrap px-4>
