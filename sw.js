@@ -2,52 +2,52 @@ importScripts('/_nuxt/workbox.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/_nuxt/app.61d78bc.js",
-    "revision": "67a0da56b0b23273769a3e8ccb442802"
+    "url": "/_nuxt/app.c71eba2.js",
+    "revision": "b018dae07985ceb07472e652b55bae9f"
   },
   {
-    "url": "/_nuxt/commons/app.67ab72a.js",
-    "revision": "8443a019302cf8f17b14c2135a6140a3"
+    "url": "/_nuxt/commons/app.14b19fc.js",
+    "revision": "3ad87272a14ad8c01afe2e8f0d3210c1"
   },
   {
-    "url": "/_nuxt/commons/index~parceiros~sobre.d1ea296.js",
-    "revision": "66c523306153b8a64d9069a87e1f6e54"
+    "url": "/_nuxt/commons/index~parceiros~sobre.29ded61.js",
+    "revision": "a70c91775ad93b42c9607f55a7a4ec3c"
   },
   {
-    "url": "/_nuxt/pages/contato.e492b01.js",
-    "revision": "1774d13925dafc10be55aa4a5ace657f"
+    "url": "/_nuxt/pages/contato.e332b40.js",
+    "revision": "ec7a65d78ec736bceff13229e3c241f9"
   },
   {
-    "url": "/_nuxt/pages/index.217d15e.js",
-    "revision": "aa01006ab2d1f19adbd7befdcd045ed4"
+    "url": "/_nuxt/pages/index.7173713.js",
+    "revision": "62ca58161f89a07ebe7377988a35080b"
   },
   {
-    "url": "/_nuxt/pages/parceiros.194c68d.js",
-    "revision": "a2b07d7b64e89dc3e41e9a14d6af75c8"
+    "url": "/_nuxt/pages/parceiros.5153673.js",
+    "revision": "8f71f55fe7b397e5b39587780a15e98f"
   },
   {
-    "url": "/_nuxt/pages/servicos.ddaa10b.js",
-    "revision": "fab13511d72727d96c21e2522f07b896"
+    "url": "/_nuxt/pages/servicos.ebb19ab.js",
+    "revision": "1bde5d04cb4651e8155a40e6fd280e2d"
   },
   {
-    "url": "/_nuxt/pages/sobre.c88d562.js",
-    "revision": "2d4fde9285a36d655f2cd9e0c585d345"
+    "url": "/_nuxt/pages/sobre.1b5b9f3.js",
+    "revision": "bb0b66277370b64e3be461795f79ff44"
   },
   {
-    "url": "/_nuxt/pages/time.bcd5e13.js",
-    "revision": "f83d9960a5350efe285d4fbdeaa08c6b"
+    "url": "/_nuxt/pages/time.e5b652b.js",
+    "revision": "82066a9d383656fc4350e2ac4746c157"
   },
   {
-    "url": "/_nuxt/runtime.a552ac5.js",
-    "revision": "8cc1bd958809f9ac26c184b1c1e704d2"
+    "url": "/_nuxt/runtime.632ffa9.js",
+    "revision": "fa08e32b458fe52810d9a72cbe4efed3"
   },
   {
-    "url": "/_nuxt/vendors~app.e024c00.js",
-    "revision": "f4c35de22dbad9f2aee9c06d5702ea09"
+    "url": "/_nuxt/vendors~app.7182969.js",
+    "revision": "4ac7f646dc9616526628e47ee74c0816"
   },
   {
-    "url": "/_nuxt/vendors~pages/contato.7442a5e.js",
-    "revision": "1a532d25d6be0a3be22406e28e01a5b0"
+    "url": "/_nuxt/vendors~pages/contato.60b3eb3.js",
+    "revision": "cbfd46c09f4ac4a725ba7924cf9195d0"
   }
 ], {
   "cacheId": "building-infra",
