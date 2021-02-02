@@ -32,7 +32,7 @@
       style="max-width: 1200px"
       v-if="display"
     >
-      <v-layout row wrap justify-space-between>
+      <v-layout row wrap justify-center>
         <v-flex
           xs12
           sm6
