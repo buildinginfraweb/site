@@ -31,6 +31,7 @@
       fluid
       style="max-width: 1200px"
       v-if="display"
+      data-aos="flip-left"
     >
       <v-layout row wrap justify-center>
         <v-flex
@@ -39,7 +40,6 @@
           md4
           v-for="(card, index) in servicesList"
           :key="index"
-          data-aos="flip-left"
         >
           <v-img
             class="blured-bg"
