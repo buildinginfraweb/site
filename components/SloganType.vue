@@ -5,12 +5,12 @@
         <h1 class="font-weight-bold">We do it</h1>
         <v-layout>
           <v-flex shrink>
-            <h2 class="display-1">
+            <h2 class="title">
               and you&nbsp;
             </h2>
           </v-flex>
           <v-flex>
-            <h2 class="display-1">
+            <h2 class="title">
               <no-ssr>
                 <vue-typer
                   :text="['relax... ', 'sell... ', 'enjoy...', 'grow...  ']"
@@ -38,12 +38,12 @@
         <h1 class="font-weight-bold">Nós fazemos</h1>
         <v-layout>
           <v-flex shrink>
-            <h2 class="display-1">
+            <h2 class="title">
               e você&nbsp;
             </h2>
           </v-flex>
           <v-flex>
-            <h2 class="display-1">
+            <h2 class="title">
               <no-ssr>
                 <vue-typer
                   :text="['relaxa...', 'vende...', 'curte...', 'cresce...']"
@@ -115,52 +115,10 @@ export default {
   margin-bottom: 48px;
 }
 .slogan h1 {
-  font-size: 112px !important;
+      font-size: 6vh;
 }
 .slogan:last-child {
   margin-bottom: 12px;
 }
-@media only screen and (max-width: 600px) {
-  .slogan {
-    color: #fffeff;
-    margin-top: 0px;
-    padding-top: 0px;
-  }
-  /* .header .slogan:first-child {
-      margin-top: -200px!important;
-      position: absolute;
-      top: 50%;
-    }
-    .header .slogan:last-child {
-      margin-top: 0px!important;
-      position: absolute;
-      top: 50%;
-    } */
-  .slogan:last-child {
-    margin-bottom: 12px;
-  }
-  .slogan h1 {
-    font-size: 77px !important;
-  }
-}
-@media only screen and (max-width: 408px) {
-  .slogan h1 {
-    font-size: 42px !important;
-  }
-}
-@media only screen and (max-width: 365px) {
-  .slogan h2 {
-    font-size: 30px !important;
-  }
-}
-@media only screen and (max-width: 340px) {
-  .slogan h2 {
-    font-size: 28px !important;
-  }
-}
-@media only screen and (max-width: 326px) {
-  .slogan h2 {
-    font-size: 26px !important;
-  }
-}
+
 </style>
