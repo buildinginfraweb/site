@@ -80,7 +80,7 @@
                 <v-btn
                   class="elevation-0 support-btn"
                   href="https://buildinginfrabr.sharepoint.com/sites/buildininfra/SitePages/Portal-de-Atendimento-ao-Cliente.aspx"
-                  >ÁREA DE CLIENTE</v-btn
+                  >ÁREA DO CLIENTE</v-btn
                 >
               </v-flex>
               <v-flex shrink class="hidden-sm-and-up">
